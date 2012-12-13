@@ -55,7 +55,6 @@
               <li class="active"><a href="index.html">Übersicht</a></li>
               <li><a href="outgoing.html">Ausgaben</a></li>
               <li><a href="category.html">Kategorien</a></li>
-              <li><a href="budget.html">Budgets</a></li>
               <li><a href="statistic.html">Statistik</a></li>
             </ul>
           </div><!--/.nav-collapse -->
@@ -78,24 +77,22 @@
 
       <div class="row">
         <div class="span12">
-          <h2>Ihre Budgets</h2>
+          <h2>Ihre Gesamtausgaben
+          		<select>
+          			<option>Diesen Monat</option>
+          			<option>November '12</option>
+          			<option>Oktober '12</option>
+          			<option>September '12</option>
+          			<option>August '12</option>
+          		</select>
+          </h2>
           <p>
-			<a href="budgetDetail.html">Urlaub</a>
 			<span>
-			  <meter value="200" min="0" max="500">
+			  <meter value="200" min="0" max="1000" style="height: 40px; width: 500px;">
 				<span>&euro; 200,-</span><span>&euro; 500,-</span>
 			  </meter>
 		    </span>
-			<span>Heute ausgegeben &euro; 56,4</span>
-		  </p>
-		  <p>
-			<a href="budgetDetail.html">Tagesausflug</a>
-			<span>
-			  <meter value="800" min="0" max="1500">
-				<span>&euro; 800,-</span><span>&euro; 1500,-</span>
-			  </meter>
-		    </span>
-			<span>Heute ausgegeben &euro; 18,5</span>
+		    <a style="display: block" href="budgetDetail.html">Ausgaben ansehen »</a>
 		  </p>
         </div>
       </div>
