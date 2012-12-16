@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Finanz2Go - Kategorien</title>
+    <title>Finanz2Go - Favoritenauswahl</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="group 70">
@@ -53,10 +53,9 @@
             </p>
             <ul class="nav">
               <li><a href="index.html">Übersicht</a></li>
-              <li><a href="outgoing.html">Ausgaben</a></li>
-              <li class="active"><a href="category.html">Kategorien</a></li>
+              <li class="active"><a href="expense.html">Ausgaben</a></li>
+              <li><a href="category.html">Kategorien</a></li>
               <li><a href="statistic.html">Statistik</a></li>
-			  <li><a href="favourites.html">Favoriten</a></li>
               <li><a href="statistic.html">Einstellungen</a></li>
             </ul>
           </div><!--/.nav-collapse -->
@@ -67,58 +66,31 @@
     <div class="container">
 
 	  <ul class="breadcrumb">
-		<li><a href="favourites.html">Favoriten</a></li>
+		<li><a href="expense.html">Ausgaben</a> <span class="divider">/</span></li>
+		<li>Vorlage auswählen</li>
 	  </ul>
 	  
-      <div class="row">
-        <div class="span12">
-          <h1>Favoriten</h1>
+      <div class="row" style="text-align: center;">
+        <div class="span5">
+          <h1>Vorlage wählen</h1>
+		</div>
+        <div class="span2">
+          <h1>oder</h1>
+		</div>
+        <div class="span5">
+          <h1><a href="expenseAdd.html">neue Ausgabe anlegen</a></h1>
 		</div>
       </div>
 	  
       <div class="row">
-        <div class="span12">
-		<table class="table">
-			<thead>
-				<tr>
-					<th/>
-					<th>Favorit</th>
-					<th>Kategorie</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td><input type="checkbox" name="favouriteSelection" value=""/></td>
-					<td>Nahrungsmittel Einkauf</td>
-					<td>Nahrungsmittel</td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="favouriteSelection" value=""/></td>
-					<td>Parkticket</td>
-					<td>Auto</td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="favouriteSelection" value=""/></td>
-					<td>Treibstoff</td>
-					<td>Auto</td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="favouriteSelection" value=""/></td>
-					<td>U-Bahn Ticket</td>
-					<td>&Ouml;ffis</td>
-				</tr>
-			</tbody>
-		</table>
+        <div class="span5">
+		  <a href="expenseFavoriteAdd.html">Treibstoff</a>
 		</div>
-      </div>
-	  
-	  <div class="row">
-        <div class="span12">
-          <button class="btn" style="margin-top:15px;">Auswahl l&ouml;schen</button>
+        <div class="span2" style="text-align: center;">
+          |
 		</div>
-      </div>
-
-      <hr/>
+	  </div>
+      <hr>
 
       <footer>
         <p>&copy; Gruppe 70 2012</p>
