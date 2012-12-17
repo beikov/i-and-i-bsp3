@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Finanz2Go - Favoritenauswahl</title>
+    <title>Finanz2Go - Vorlagenauswahl</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="group 70">
@@ -53,10 +53,10 @@
             </p>
             <ul class="nav">
               <li><a href="index.html">Übersicht</a></li>
-              <li class="active"><a href="expense.html">Ausgaben</a></li>
+              <li><a href="expense.html">Ausgaben</a></li>
               <li><a href="category.html">Kategorien</a></li>
               <li><a href="statistic.html">Statistik</a></li>
-			  <li><a href="expenseFavorite.html">Favoriten</a></li>
+			  <li  class="active"><a href="expenseFavorite.html">Favoriten</a></li>
               <li><a href="statistic.html">Einstellungen</a></li>
             </ul>
           </div><!--/.nav-collapse -->
@@ -67,31 +67,50 @@
     <div class="container">
 
 	  <ul class="breadcrumb">
-		<li><a href="expense.html">Ausgaben</a> <span class="divider">/</span></li>
-		<li>Vorlage auswählen</li>
+		<li><a href="expenseFavorite.html">Favoriten</a></li>
 	  </ul>
 	  
-      <div class="row" style="text-align: center;">
-        <div class="span5">
-          <h1>Vorlage wählen</h1>
-		</div>
-        <div class="span2">
-          <h1>oder</h1>
-		</div>
-        <div class="span5">
-          <h1><a href="expenseAdd.html">neue Ausgabe anlegen</a></h1>
+      <div class="row">
+        <div class="span12">
+          <h1>Favorit auswählen oder <a href="#">neu anlegen</a></h1>
 		</div>
       </div>
 	  
-      <div class="row">
+      <div class="row" id="main">
         <div class="span5">
-		  <a href="expenseFavoriteAdd.html">Treibstoff</a>
+		  <table class="table">
+			<thead>
+				<tr>
+					<th>Vorlage</th>
+					<th>Kategorie</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Nahrungsmittel Einkauf</td>
+					<td>Nahrungsmittel</td>
+				</tr>
+				<tr>
+					<td>Parkticket</td>
+					<td>Auto</td>
+				</tr>
+				<tr>
+					<td><a href="expenseAddWithPreset_Treibstoff.html">Treibstoff</a></td>
+					<td>Auto</td>
+				</tr>
+				<tr>
+					<td>U-Bahn Ticket</td>
+					<td>&Ouml;ffis</td>
+				</tr>
+			</tbody>
+		</table>
 		</div>
-        <div class="span2" style="text-align: center;">
-          |
-		</div>
-	  </div>
-      <hr>
+		<span class="span2" align="center">
+		<canvas id="seperator" style="border: 1px solid #FFF;" width="1" align="center"></canvas>
+		</span>
+      </div>
+
+      <hr/>
 
       <footer>
         <p>&copy; Gruppe 70 2012</p>
@@ -104,6 +123,21 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+    	
+    	var seperator = document.getElementById("seperator");
+    	var main = document.getElementById("main")
+    	
+    	seperator.height = main.clientHeight;
+    
+	    
+	    var seperator_context = seperator.getContext("2d");
+
+	    seperator_context.beginPath();
+	    seperator_context.moveTo(seperator.width/2, 0);
+	    seperator_context.lineTo(seperator.width/2, seperator.height);
+	    seperator_context.stroke();
+	</script>
 
   </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Finanz2Go - Kategorien</title>
+    <title>Finanz2Go - Vorlagenauswahl - Treibstoff</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="group 70">
@@ -54,7 +54,7 @@
             <ul class="nav">
               <li><a href="index.html">Übersicht</a></li>
               <li><a href="expense.html">Ausgaben</a></li>
-              <li><a href="category.html">Kategorien</a></li>
+              <li><a href="category.html">Kategorien</a></li>              
               <li><a href="statistic.html">Statistik</a></li>
 			  <li  class="active"><a href="expenseFavorite.html">Favoriten</a></li>
               <li><a href="statistic.html">Einstellungen</a></li>
@@ -67,58 +67,119 @@
     <div class="container">
 
 	  <ul class="breadcrumb">
-		<li><a href="expenseFavorite.html">Favoriten</a></li>
+		<li><a href="expense.html">Ausgaben</a> <span class="divider">/</span></li>
+		<li><a href="expensePreset.html">Vorlagenauswahl</a> <span class="divider">/</span></li>
+		<li>Treibstoff</li>
 	  </ul>
 	  
       <div class="row">
         <div class="span12">
-          <h1>Favoriten</h1>
+          <h1>Treibstoff</h1>
 		</div>
       </div>
-	  
-      <div class="row">
-        <div class="span12">
-		<table class="table">
-			<thead>
-				<tr>
-					<th/>
-					<th>Favorit</th>
-					<th>Kategorie</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td><input type="checkbox" name="favouriteSelection" value=""/></td>
-					<td>Nahrungsmittel Einkauf</td>
-					<td>Nahrungsmittel</td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="favouriteSelection" value=""/></td>
-					<td>Parkticket</td>
-					<td>Auto</td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="favouriteSelection" value=""/></td>
-					<td>Treibstoff</td>
-					<td>Auto</td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="favouriteSelection" value=""/></td>
-					<td>U-Bahn Ticket</td>
-					<td>&Ouml;ffis</td>
-				</tr>
-			</tbody>
-		</table>
-		</div>
+      
+      <form class="form-horizontal">
+      
+      <div class="control-group">
+        <label class="control-label" for=
+        "inputKategorie">Kategorie:</label>
+
+        <div class="controls"><label>Nahrungsmittel</label></div>
       </div>
-	  
-	  <div class="row">
-        <div class="span12">
-          <button class="btn" style="margin-top:15px;">Auswahl l&ouml;schen</button>
+
+      <div class="control-group">
+        <label class="control-label" for=
+        "inputBetrag">Betrag:</label>
+
+        <div class="controls">
+          <input type="text" id="inputBetrag" placeholder="Betrag">
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label" for=
+        "inputWahrung">W&#228;hrung:</label>
+
+        <div class="controls">
+          <span class="input" id="inputWahrung"><select>
+            <option>
+              Euro
+            </option>
+
+            <option>
+              Dollar
+            </option>
+
+            <option>
+              Yen
+            </option>
+
+            <option>
+              Pfund
+            </option>
+          </select></span>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label" for="inputDatum">Datum:</label>
+
+        <div class="constrols">
+      		<span class="input-append date" id="dp1" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+				<input type="text" value="12-02-2012" readonly>
+			<span class="add-on"><i class="icon-calendar"></i></span>
 		</div>
       </div>
 
-      <hr/>
+      <div class="control-group">
+        <label class="control-label" for=
+        "inputWiederholung">Wiederholung:</label>
+
+        <div class="controls">
+          <span class="input" id="inputWiederholung"><select>
+            <option>
+              Einmalig
+            </option>
+
+            <option>
+              T&#228;glich
+            </option>
+
+            <option>
+              W&#246;chentlich
+            </option>
+
+            <option>
+              Monatlich
+            </option>
+
+            <option>
+              J&#228;hrlich
+            </option>
+          </select></span>
+        </div>
+      </div>
+      
+      <div class="control-group">
+      	<label class="control-label" for="inputNotiz">Notiz:</label>
+      		<div class="controls">
+      			<textarea rows="3" id="inputNotiz"></textarea>
+      		</div>
+      </div>
+    </form>
+	  
+      <div class="row">
+        <div class="span12">
+		  <button class="btn btn-success">
+		    <span class="icon-ok"></span> Speichern
+		  </button>
+		  <button class="btn">
+		    Abbrechen
+		  </button>
+		</div>
+      </div>
+
+      <hr>
 
       <footer>
         <p>&copy; Gruppe 70 2012</p>
@@ -131,6 +192,12 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script>
+		$(function(){
+			window.prettyPrint && prettyPrint();
+			$('#dp1').datepicker();		
+		});
+	</script>
   </body>
 </html>
