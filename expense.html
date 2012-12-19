@@ -167,70 +167,74 @@
                             <td><a href="expenseEdit.html">Bearbeiten</a> | <a href="#deleteDialog" data-toggle="modal">L&ouml;schen</a></td>
                         </tr>
                         <tr>
-                            <td><strong><a href="#" class="icon-chevron-right" style="text-indent: -9999px;" onclick="if(this.innerHTML == '-'){ $('.category2').hide(); this.innerHTML = '+'; this.className = 'icon-chevron-right';} else { $('.category2').show(); this.innerHTML = '-'; this.className = 'icon-chevron-down';}">+</a><a href="categoryDetail.html">Nahrungsmittel</a><strong></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        </tr>
-                                        <tr class="category2" style="display: none;">
-                                            <td><a href="expenseDetail.html">Tomaten</a></td>
-                                            <td>&euro;1,20</td>
-                                            <td>10.11.2012</td>
-                                            <td><a href="expenseEdit.html">Bearbeiten</a> | <a href="#deleteDialog" data-toggle="modal">L&ouml;schen</a></td>
-                                        </tr>
-                                        </tbody>
-                                        </table>
-                                        </div>
+                            <td>
+                                <strong>
+                                    <a href="#" class="icon-chevron-right" style="text-indent: -9999px;" onclick="if(this.innerHTML == '-'){ $('.category2').hide(); this.innerHTML = '+'; this.className = 'icon-chevron-right';} else { $('.category2').show(); this.innerHTML = '-'; this.className = 'icon-chevron-down';}">+</a><a href="categoryDetail.html">Nahrungsmittel</a>
+                                </strong>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr class="category2" style="display: none;">
+                            <td><a href="expenseDetail.html">Tomaten</a></td>
+                            <td>&euro;1,20</td>
+                            <td>10.11.2012</td>
+                            <td><a href="expenseEdit.html">Bearbeiten</a> | <a href="#deleteDialog" data-toggle="modal">L&ouml;schen</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-                                        <div class="pagination pagination-right">
-                                            <ul>
-                                                <li class="disabled"><a href="#">Prev</a></li>
-                                                <li class="active"><a href="#">1</a></li>
-                                                <li><a href="#">2</a></li>
-                                                <li><a href="#">3</a></li>
-                                                <li><a href="#">4</a></li>
-                                                <li><a href="#">Next</a></li>
-                                            </ul>
-                                        </div>
+            <div class="pagination pagination-right">
+                <ul>
+                    <li class="disabled"><a href="#">Prev</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">Next</a></li>
+                </ul>
+            </div>
 
 
-                                        <!-- Modal -->
-                                        <div id="deleteDialog" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                            <div class="modal-body">
-                                                <p>Wirklich l&ouml;schen?</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button class="btn btn-danger" data-dismiss="modal">
-                                                    <span class="icon-trash"></span> Ja, L&ouml;schen
-                                                </button>
-                                                <button class="btn" data-dismiss="modal">
-                                                    Abbrechen
-                                                </button>
-                                            </div>
-                                        </div>
+            <!-- Modal -->
+            <div id="deleteDialog" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-body">
+                    <p>Wirklich l&ouml;schen?</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-dismiss="modal">
+                        <span class="icon-trash"></span> Ja, L&ouml;schen
+                    </button>
+                    <button class="btn" data-dismiss="modal">
+                        Abbrechen
+                    </button>
+                </div>
+            </div>
 
-                                        <hr>
+            <hr>
 
-                                        <footer>
-                                            <p>&copy; Gruppe 70 2012</p>
-                                        </footer>
+            <footer>
+                <p>&copy; Gruppe 70 2012</p>
+            </footer>
 
-                                        </div><!--/.fluid-container-->
+        </div><!--/.fluid-container-->
 
-                                        <!-- Le javascript
-                                        ================================================== -->
-                                        <!-- Placed at the end of the document so the pages load faster -->
-                                        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-                                        <script src="js/bootstrap.min.js"></script>
-                                        <script src="js/bootstrap-datepicker.js"></script>
-                                        <script>
-                                            $(function(){
-                                                window.prettyPrint && prettyPrint();
-                                                $('#dp1').datepicker();
-                                                $('#dp2').datepicker();			
-                                            });
-                                        </script>
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-datepicker.js"></script>
+        <script>
+            $(function(){
+                window.prettyPrint && prettyPrint();
+                $('#dp1').datepicker();
+                $('#dp2').datepicker();			
+            });
+        </script>
 
-                                        </body>
-                                        </html>
-                                        </html>
+    </body>
+</html>
+</html>
