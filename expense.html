@@ -83,10 +83,12 @@
 		</div>
       </div>
       
-      <div>
-      	<div>
-      		<strong>- Erweiterte Suche</strong>
+      <div class="accordion" id="accordion2" style="margin-top:15px">
+      	<div class="accordion-group">
+      	<div class="accordion-heading">
+      		<strong><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">- Erweiterte Suche</a></strong>
       	</div>
+      	<div id="collapseOne" class="accordion-body collapse in">
       	<div>
       		<span>Kategoriefilter:</span>
       		<span class="input">
@@ -125,7 +127,8 @@
       			</span>
       		</span>
       	</div>
-      	
+      </div>
+      </div>	
       </div>
 	  
       <div class="row" style="margin-top:10px">
@@ -178,28 +181,36 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong>- Kleidung</strong></td>
+              <td><strong>
+						<a href="#" style="margin-right: 4px;" onclick="if(this.innerHTML == '-'){ $('.category1').hide(); this.innerHTML = '+';} else { $('.category1').show(); this.innerHTML = '-'; }">-</a><a href="categoryDetail.html">Kleidung</a>
+					  </strong></td>
               <td></td>
               <td></td>
               <td></td>
             </tr>
-            <tr>
+            <tr class="category1">
               <td>Neue Schuhe</td>
               <td>&euro;60</td>
               <td>19.11.2012</td>
               <td>Bearbeiten | L&ouml;schen</td>
             </tr>
-            <tr>
+            <tr class="category1">
               <td>T-Shirts</td>
               <td>&euro;120</td>
               <td>19.11.2012</td>
               <td>Bearbeiten | L&ouml;schen</td>
             </tr>
             <tr>
-              <td><strong>+Nahrungsmittel<strong></td>
+              <td><strong><a href="#" style="margin-right: 4px;" onclick="if(this.innerHTML == '+'){ $('.category2').show(); this.innerHTML = '-';} else { $('.category2').hide(); this.innerHTML = '+'; }">+</a><a href="categoryDetail.html">Nahrungsmittel</a><strong></td>
               <td></td>
               <td></td>
               <td></td>
+            </tr>
+            <tr class="category2" style="display: none;">
+              <td>Tomaten</td>
+              <td>&euro;1,20</td>
+              <td>10.11.2012</td>
+              <td>Bearbeiten | L&ouml;schen</td>
             </tr>
           </tbody>
         </table>
