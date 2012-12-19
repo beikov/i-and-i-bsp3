@@ -56,8 +56,8 @@
               <li><a href="expense.html">Ausgaben</a></li>
               <li class="active"><a href="category.html">Kategorien</a></li>
               <li><a href="statistic.html">Statistik</a></li>
-			  <li><a href="expenseFavorite.html">Favoriten</a></li>
-              <li><a href="statistic.html">Einstellungen</a></li>
+			  <li><a href="presets.html">Vorlagen</a></li>
+              <li><a href="settings.html">Einstellungen</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -79,13 +79,110 @@
 		</div>
       </div>
 	  
-      <div class="row">
-        <div class="span12">
-		  <a href="categoryDetail.html">
-		    Kleidung
-		  </a>
-		</div>
+	  <div class="row" style="margin-top:10px">
+		<span class="span12 pull-left">
+		  <span class="input-prepend">
+			<span class="add-on">
+				<i class="icon-search"></i>
+			</span>
+			<input type="text" class="span2" placeholder="Suchen"/>
+			</span>
+		  </span>
+		</span>
+	  </div>
+      <div style="margin-top:10px">
+			<table class="table table-bordered">
+			  <thead>
+				<tr>
+				  <th class="span5">Name</th>
+				  <th class="span1">Limit</th>
+				  <th class="span1">Währung</th>
+				  <th class="span1">Von</th>
+				  <th class="span1">Bis</th>
+				  <th class="span3">Aktion</th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr>
+				  <td>
+					  <strong>
+						<a href="#" style="margin-right: 4px;" onclick="if(this.innerHTML == '-'){ $('.category1').hide(); this.innerHTML = '+';} else { $('.category1').show(); this.innerHTML = '-'; }">-</a><a href="categoryDetail.html">Kleidung</a>
+					  </strong>
+				  </td>
+				  <td></td>
+				  <td></td>
+				  <td></td>
+				  <td></td>
+				  <td>
+					<a href="categoryEdit.html">Bearbeiten</a>
+				  </td>
+				</tr>
+				<tr class="category1">
+				  <td></td>
+				  <td>700</td>
+				  <td>Euro</td>
+				  <td>01.06.2012</td>
+				  <td>14.06.2012</td>
+				  <td><a href="categoryEdit.html">Bearbeiten</a> | <a href="#deleteDialog" data-toggle="modal">L&ouml;schen</a></td>
+				</tr>
+				<tr class="category1">
+				  <td></td>
+				  <td>600</td>
+				  <td>Euro</td>
+				  <td>10.10.2012</td>
+				  <td>11.10.2012</td>
+				  <td><a href="categoryEdit.html">Bearbeiten</a> | <a href="#deleteDialog" data-toggle="modal">L&ouml;schen</a></td>
+				</tr>
+				<tr>
+				  <td>
+					  <strong>
+						<a href="#" style="margin-right: 4px;" onclick="if(this.innerHTML == '-'){ $('.category2').hide(); this.innerHTML = '+';} else { $('.category2').show(); this.innerHTML = '-'; }">+</a><a href="categoryDetail.html">Nahrungsmittel</a>
+					  </strong>
+				  </td>
+				  <td></td>
+				  <td></td>
+				  <td></td>
+				  <td></td>
+				  <td>
+					<a href="categoryEdit.html">Bearbeiten</a>
+				  </td>
+				</tr>
+				<tr class="category2" style="display: none;">
+				  <td></td>
+				  <td>400</td>
+				  <td>Euro</td>
+				  <td>01.10.2012</td>
+				  <td>01.12.2012</td>
+				  <td><a href="categoryEdit.html">Bearbeiten</a> | <a href="#deleteDialog" data-toggle="modal">L&ouml;schen</a></td>
+				</tr>
+			  </tbody>
+			</table>
       </div>
+	<div class="pagination pagination-right">
+		<ul>
+			<li class="disabled"><a href="#">Prev</a></li>
+			<li class="active"><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">Next</a></li>
+		</ul>
+	</div>
+	
+	<!-- Modal -->
+	<div id="deleteDialog" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-body">
+			<p>Wirklich löschen?</p>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-danger" data-dismiss="modal">
+				<span class="icon-trash"></span> Ja, Löschen
+			</button>
+			<button class="btn" data-dismiss="modal">
+				Abbrechen
+			</button>
+		</div>
+	</div>
 
       <hr>
 
