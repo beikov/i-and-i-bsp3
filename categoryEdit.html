@@ -76,9 +76,75 @@
           <h1>Kategorie bearbeiten</h1>
 		</div>
       </div>
-	  
-      <div class="row">
-        <div class="span12">
+	  <form class="form-horizontal">
+		<div class="control-group">
+			<label class="control-label" for="inputName">Name</label>
+			<div class="controls">
+				<input type="text" id="inputName" placeholder="Name">
+			</div>
+		</div>
+		<div id="limitGroup" class="accordion">
+			<div class="accordion-group">
+				<div id="toggleLimit1" class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" href="#limit1">
+					20.03.2012 - 12.04.2012
+					</a>
+				</div>
+				<div id="limit1" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<div class="control-group">
+							<label class="control-label" for="inputLimit1">Limit</label>
+							<div class="controls">
+								<input type="text" id="inputLimit1" placeholder="Limit">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="inputCurrency1">Währung</label>
+							<div class="controls">
+								<select id="inputCurrency1">
+									<option>Euro</option>
+									<option>Dollar</option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="inputRecurrence1">Wiederholung</label>
+							<div class="controls">
+								<select id="inputRecurrence1">
+									<option>Einmalig</option>
+									<option>Wöchentlich</option>
+									<option>Monatlich</option>
+									<option>Jährlich</option>
+								</select>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="inputFrom1">Von</label>
+							<div class="controls">
+								<input type="date" id="inputFrom1" placeholder="Von"/>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="inputTo1">Bis</label>
+							<div class="controls">
+								<input type="date" id="inputTo1" placeholder="Bis"/>
+							</div>
+						</div>
+						<div class="control-group">
+							<button class="btn btn-danger">
+								<span class="icon-trash"></span> Löschen
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="control-group">
+		  <a class="btn btn-primary" href="limitAdd.html">
+		    <span class="icon-plus"></span> Limit hinzufügen
+		  </a>
+		</div>
+		<div class="control-group">
 		  <button class="btn btn-success">
 		    <span class="icon-ok"></span> Speichern
 		  </button>
@@ -89,7 +155,7 @@
 		    Abbrechen
 		  </button>
 		</div>
-      </div>
+	  </form>
 
       <hr>
 
