@@ -89,44 +89,40 @@
       		<strong><a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">- Erweiterte Suche</a></strong>
       	</div>
       	<div id="collapseOne" class="accordion-body collapse in">
-      	<div>
-      		<span>Kategoriefilter:</span>
-      		<span class="input">
-              <select>
-                <option>Essen</option>
-                <option>Kino</option>
-                <option>Sonstiges</option>
-                <option>Urlaub</option>
-              </select>
-            </span>
-      	</div>
       	
-      	<div>
-      		<span>Budgetfilter:</span>
-      		<span class="input">
-      			<select>
-      				<option>Budget 1</option>
-      				<option>Budget 2</option>
-      			</select>
-      	</div>
-      	
-      	<div class="row">
-      		<span class="span6" id="von">
-      			<span>Von:</span>
-      			<span class="input-append date" id="dp1" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-				<input class="span2" size="16" type="text" value="12-02-2012" readonly>
-				<span class="add-on"><i class="icon-calendar"></i></span>
-      			</span>
-      		</span>
+      	<form class="form-horizontal">
+      		<div class="control-group">
+      			<label class="control-label">Kategoriefilter:</label>
       		
-      		<span class="span6" id="bis">
-      			<span>Bis:</span>
-      			<span class="input-append date" id="dp2" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-				<input class="span2" size="16" type="text" value="12-02-2012" readonly>
-				<span class="add-on"><i class="icon-calendar"></i></span>
-      			</span>
-      		</span>
-      	</div>
+      			<div class="controls">
+      				<div class="input">
+	      				<select>
+		      				<option>Essen</option>
+		      				<option>Kino</option>
+		      				<option>Sonstiges</option>
+		      				<option>Urlaub</option>
+		      			</select>
+		      		</div>
+		      	</div>
+		    </div>
+      	
+		    <div class="control-group">
+				    <label class="control-label">Von:</label>
+				    	<div class="controls">
+					   		<input type="text" value="11.12.2012"/>
+					   		<button class="btn"><i class="icon-calendar"></i></button>
+					   	</div>
+		    </div>
+      		
+      		<div class="control-group">
+				    <label class="control-label">Bis:</label>
+				    	<div class="controls">
+					   		<input type="text" value="31.12.2012"/>
+					   		<button class="btn"><i class="icon-calendar"></i></button>
+					   	</div>
+		    </div>
+      	
+      	</form>
       </div>
       </div>	
       </div>
@@ -182,8 +178,7 @@
           <tbody>
             <tr>
               <td><strong>
-						<a href="#" style="margin-right: 4px;" onclick="if(this.innerHTML == '-'){ $('.category1').hide(); this.innerHTML = '+';} else { $('.category1').show(); this.innerHTML = '-'; }">-</a><a href="categoryDetail.html">Kleidung</a>
-					  </strong></td>
+						<a href="#" class="icon-chevron-down" style="text-indent: -9999px;" onclick="if(this.innerHTML == '-'){ $('.category1').hide(); this.innerHTML = '+'; this.className = 'icon-chevron-right';} else { $('.category1').show(); this.innerHTML = '-'; this.className = 'icon-chevron-down';}">-</a><strong><a href="categoryDetail.html">Kleidung</a></strong></td>
               <td></td>
               <td></td>
               <td></td>
@@ -201,7 +196,7 @@
               <td>Bearbeiten | L&ouml;schen</td>
             </tr>
             <tr>
-              <td><strong><a href="#" style="margin-right: 4px;" onclick="if(this.innerHTML == '+'){ $('.category2').show(); this.innerHTML = '-';} else { $('.category2').hide(); this.innerHTML = '+'; }">+</a><a href="categoryDetail.html">Nahrungsmittel</a><strong></td>
+              <td><a href="#" class="icon-chevron-down" style="text-indent: -9999px;" onclick="if(this.innerHTML == '-'){ $('.category2').hide(); this.innerHTML = '+'; this.className = 'icon-chevron-right';} else { $('.category2').show(); this.innerHTML = '-'; this.className = 'icon-chevron-down';}">-</a><strong><a href="categoryDetail.html">Nahrungsmittel</a></strong></td>
               <td></td>
               <td></td>
               <td></td>
