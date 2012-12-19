@@ -1,174 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Finanz2Go - Übersicht</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="group 70">
+    <head>
+        <meta charset="utf-8">
+        <title>Finanz2Go - &Uuml;ersicht</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="group 70">
 
-    <!-- Le styles -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-    </style>
-    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+        <!-- Le styles -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <style type="text/css">
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        </style>
+        <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 
-    <!-- Fav and touch icons -->
-	
-	<!--
+        <!-- Fav and touch icons -->
+
+        <!--
     <link rel="shortcut icon" href="ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
-	-->
-  </head>
+        -->
+    </head>
 
-  <body>
+    <body>
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="index.html">Finanz2Go</a>
-          <div class="nav-collapse collapse">
-            <p class="navbar-text pull-right">
-			  <span>
-              Logged in as <a href="#" class="navbar-link">Team 70</a>
-			  </span>
-			  <span><a href="#">Logout</a></span>
-            </p>
-            <ul class="nav">
-              <li class="active"><a href="index.html">Übersicht</a></li>
-              <li><a href="expense.html">Ausgaben</a></li>
-              <li><a href="category.html">Kategorien</a></li>
-              <li><a href="statistic.html">Statistik</a></li>
-			  <li><a href="presets.html">Vorlagen</a></li>
-              <li><a href="settings.html">Einstellungen</a></li>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="index.html">Finanz2Go</a>
+                    <div class="nav-collapse collapse">
+                        <p class="navbar-text pull-right">
+                            <span>
+                                Logged in as <a href="#" class="navbar-link">Team 70</a>
+                            </span>
+                            <span><a href="#">Logout</a></span>
+                        </p>
+                        <ul class="nav">
+                            <li class="active"><a href="index.html">&Uuml;bersicht</a></li>
+                            <li><a href="expense.html">Ausgaben</a></li>
+                            <li><a href="category.html">Kategorien</a></li>
+                            <li><a href="statistic.html">Statistik</a></li>
+                            <li><a href="presets.html">Vorlagen</a></li>
+                            <li><a href="settings.html">Einstellungen</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <ul class="breadcrumb">
+                <li><a href="index.html">&Uuml;bersicht</a></li>
             </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
 
-    <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <h1>&Uuml;bersicht</h1>
+                    <p>Heutige Ausgaben:<span>&euro; 124,54</span></p>
+                </div>
+            </div>
 
-	  <ul class="breadcrumb">
-		<li><a href="index.html">Übersicht</a></li>
-	  </ul>
-	
-      <div class="row">
-        <div class="span12">
-          <h1>Übersicht</h1>
-          <p>Heutige Ausgaben:<span>&euro; 124,54<span></p>
-		</div>
-      </div>
+            <div class="row" style="margin-bottom: 40px;">
+                <div class="span12">
+                    <h2>Ihre Gesamtausgaben
+                        <select id="choose-month">
+                            <option value="currentMonth" label="Diesen Monat">Diesen Monat</option>
+                            <option value="november2012" label="November '12">November '12</option>
+                            <option value="october2012" label="Oktober '12">Oktober '12</option>
+                            <option value="september2012" label="September '12">September '12</option>
+                            <option value="august2012" label="August '12">August '12</option>
+                        </select>
+                    </h2>
+                    <p>
+                    <div style="position: relative;">
+                        <meter id="total" value="200" min="0" max="1000" style="height: 50px; width: 100%;">
+                        </meter>
+                        <div style="position: absolute; top: 16px; left: 500px;">
+                            <strong>&euro; 200 / &euro; 1.000</strong>
+                        </div>
+                    </div>
+                    <a style="display: block; margin-top: 20px;" href="expense.html">Ausgaben ansehen �</a>
+                </div>
+            </div>
 
-      <div class="row" style="margin-bottom: 40px;">
-        <div class="span12">
-          <h2>Ihre Gesamtausgaben
-          		<select id="choose-month">
-          			<option value="currentMonth" label="Diesen Monat">Diesen Monat</option>
-          			<option value="november2012" label="November '12">November '12</option>
-          			<option value="october2012" label="Oktober '12">Oktober '12</option>
-          			<option value="september2012" label="September '12">September '12</option>
-          			<option value="august2012" label="August '12">August '12</option>
-          		</select>
-          </h2>
-          <p>
-			<div style="position: relative;">
-			  <meter id="total" value="200" min="0" max="1000" style="height: 50px; width: 100%;">
-			  </meter>
-			  <div style="position: absolute; top: 16px; left: 500px;">
-			  	<strong>€ 200 / € 1.000</strong>
-			  </div>
-		    </div>
-		    <a style="display: block; margin-top: 20px;" href="expense.html">Ausgaben ansehen »</a>
-		  </p>
-        </div>
-      </div>
+            <div class="row">
+                <div class="span12">
+                    <h2>Ihre Kategorien</h2>
+                    <p>
+                        <a href="categoryDetail.html">Kleidung</a>
+                        <span>
+                            <meter value="480" min="0" max="600">
+                                <span>&euro; 480,-</span><span>&euro; 600,-</span>
+                            </meter>
+                        </span>
+                        <span>Heute ausgegeben &euro; 49,64</span>
+                    </p>
+                    <p>
+                        <a href="categoryDetail.html">Nahrungsmittel</a>
+                        <span>
+                            <meter value="330" min="0" max="600">
+                                <span>&euro; 330,-</span><span>&euro; 600,-</span>
+                            </meter>
+                        </span>
+                        <span>Heute ausgegeben &euro; 78,3</span>
+                    </p>
+                </div>
+            </div>
 
-      <div class="row">
-        <div class="span12">
-          <h2>Ihre Kategorien</h2>
-          <p>
-			<a href="categoryDetail.html">Kleidung</a>
-			<span>
-			  <meter value="480" min="0" max="600">
-				<span>&euro; 480,-</span><span>&euro; 600,-</span>
-			  </meter>
-		    </span>
-			<span>Heute ausgegeben &euro; 49,64</span>
-		  </p>
-		  <p>
-			<a href="categoryDetail.html">Nahrungsmittel</a>
-			<span>
-			  <meter value="330" min="0" max="600">
-				<span>&euro; 330,-</span><span>&euro; 600,-</span>
-			  </meter>
-		    </span>
-			<span>Heute ausgegeben &euro; 78,3</span>
-		  </p>
-        </div>
-      </div>
+            <hr>
 
-      <hr>
+            <footer>
+                <p>&copy; Gruppe 70 2012</p>
+            </footer>
 
-      <footer>
-        <p>&copy; Gruppe 70 2012</p>
-      </footer>
+        </div><!--/.fluid-container-->
 
-    </div><!--/.fluid-container-->
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-	
-	<script type="text/javascript">
-        	$( document ).ready( function() {
-        		$( "#choose-month" ).change( function() {
-        			var chosen = $( this ).find( ":selected" );
+        <script type="text/javascript">
+            $( document ).ready( function() {
+                $( "#choose-month" ).change( function() {
+                    var chosen = $( this ).find( ":selected" );
         			
-        			if ( chosen.val() == "currentMonth" ) {
-        				updateTotalMeter( 200, 1000 );
-        			}
-        			else if ( chosen.val() == "november2012" ) {
-        				updateTotalMeter( 967.99, 1000 );
-        			}
-        			else if ( chosen.val() == "october2012" ) {
-        				updateTotalMeter( 899.99, 1000 );
-        			}
-        			else if ( chosen.val() == "september2012" ) {
-        				updateTotalMeter( 1000, 1000 );
-        			}
-        			else if ( chosen.val() == "august2012" ) {
-        				updateTotalMeter( 990.99, 1500 );
-        			}
-        		})
+                    if ( chosen.val() == "currentMonth" ) {
+                        updateTotalMeter( 200, 1000 );
+                    }
+                    else if ( chosen.val() == "november2012" ) {
+                        updateTotalMeter( 967.99, 1000 );
+                    }
+                    else if ( chosen.val() == "october2012" ) {
+                        updateTotalMeter( 899.99, 1000 );
+                    }
+                    else if ( chosen.val() == "september2012" ) {
+                        updateTotalMeter( 1000, 1000 );
+                    }
+                    else if ( chosen.val() == "august2012" ) {
+                        updateTotalMeter( 990.99, 1500 );
+                    }
+                })
         		
         		
-        	})
+            })
         	
-        	function updateTotalMeter( current, max ) {
-        		$( "#total" ).attr( { "value" : current, "max" : max } );
-        		$( "#total" ).next().find( "strong" ).text( "€ " + current + " / €" + max );
-        	}
-    </script>
-	
-  </body>
+            function updateTotalMeter( current, max ) {
+                $( "#total" ).attr( { "value" : current, "max" : max } );
+                $( "#total" ).next().find( "strong" ).text( "&euro; " + current + " / &euro;" + max );
+            }
+        </script>
+
+    </body>
 </html>
