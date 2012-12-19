@@ -184,28 +184,28 @@
               <td></td>
             </tr>
             <tr class="category1">
-              <td>Neue Schuhe</td>
+              <td><a href="expenseDetail.html">Neue Schuhe</a></td>
               <td>&euro;60</td>
               <td>19.11.2012</td>
-              <td>Bearbeiten | L&ouml;schen</td>
+              <td><a href="expenseEdit.html">Bearbeiten</a> | <a href="#deleteModal" role="button" data-toggle="modal">L&ouml;schen</a></td>
             </tr>
             <tr class="category1">
-              <td>T-Shirts</td>
+              <td><a href="expenseDetail.html">T-Shirts</a></td>
               <td>&euro;120</td>
               <td>19.11.2012</td>
-              <td>Bearbeiten | L&ouml;schen</td>
+              <td><a href="expenseEdit.html">Bearbeiten</a> | <a href="#deleteModal" role="button" data-toggle="modal">L&ouml;schen</a></td>
             </tr>
             <tr>
-              <td><a href="#" class="icon-chevron-down" style="text-indent: -9999px;" onclick="if(this.innerHTML == '-'){ $('.category2').hide(); this.innerHTML = '+'; this.className = 'icon-chevron-right';} else { $('.category2').show(); this.innerHTML = '-'; this.className = 'icon-chevron-down';}">-</a><strong><a href="categoryDetail.html">Nahrungsmittel</a></strong></td>
+              <td><a href="#" class="icon-chevron-right" style="text-indent: -9999px;" onclick="if(this.innerHTML == '-'){ $('.category2').hide(); this.innerHTML = '+'; this.className = 'icon-chevron-right';} else { $('.category2').show(); this.innerHTML = '-'; this.className = 'icon-chevron-down';}">+</a><strong><a href="categoryDetail.html">Nahrungsmittel</a></strong></td>
               <td></td>
               <td></td>
               <td></td>
             </tr>
             <tr class="category2" style="display: none;">
-              <td>Tomaten</td>
+              <td><a href="expenseDetail.html">Tomaten</a></td>
               <td>&euro;1,20</td>
               <td>10.11.2012</td>
-              <td>Bearbeiten | L&ouml;schen</td>
+              <td><a href="expenseEdit.html">Bearbeiten</a> | <a href="#deleteModal" role="button" data-toggle="modal">L&ouml;schen</a></td>
             </tr>
           </tbody>
         </table>
@@ -222,6 +222,22 @@
       </footer>
 
     </div><!--/.fluid-container-->
+    
+    <!-- Loesch-Bestaetigungsfenster -->
+    
+    <div id="deleteModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	    <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		    <h3 id="myModalLabel">Achtung</h3>
+		</div>
+		<div class="modal-body">
+			<p>M&ouml;chten Sie wirklich den Eintrag l&ouml;schen?</p>
+		</div>
+		<div class="modal-footer">
+			<button class="btn" data-dismiss="modal" aria-hidden="true">Abbrechen</button>
+			<button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">L&ouml;schen</button>			
+		</div>
+	</div>
 
     <!-- Le javascript
     ================================================== -->
