@@ -2,27 +2,26 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-
-        <title>Finanz2Go - Ausgabe hinzuf&uuml;gen</title>
+        <title>Finanz2Go - Vorlagenauswahl - Treibstoff</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="group 70">
 
         <!-- Le styles -->
-        <link href="css/bootstrap.min.css" rel="stylesheet" type=
-              "text/css">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
         <style type="text/css">
             body {
                 padding-top: 60px;
                 padding-bottom: 40px;
             }
         </style>
-        <link href="css/bootstrap-responsive.min.css" rel="stylesheet"
-              type="text/css">
+        <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
-            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-          <![endif]-->
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
     </head>
 
     <body>
@@ -57,28 +56,24 @@
         </div>
 
         <div class="container">
-            <ul class="breadcrumb">
-                <li><a href="expense.html">Ausgaben</a> <span class=
-                                                              "divider">/</span></li>
 
-                <li>Ausgabe hinzuf&uuml;gen</li>
+            <ul class="breadcrumb">
+                <li><a href="expense.html">Ausgaben</a> <span class="divider">/</span></li>
+                <li><a href="expensePreset.html">Vorlagenauswahl</a> <span class="divider">/</span></li>
+                <li>Treibstoff</li>
             </ul>
 
             <div class="row">
                 <div class="span12">
-                    <h1>Ausgabe hinzuf&uuml;gen</h1>
+                    <h1>Treibstoff</h1>
                 </div>
             </div>
 
             <form class="form-horizontal">
-                <div class="control-group">
-                    <label class="control-label" for=
-                           "inputBezeichnung">Bezeichnung:</label>
 
-                    <div class="controls">
-                        <input type="text" id="inputBezeichnung" placeholder=
-                               "Bezeichnung">
-                    </div>
+                <div class="control-group">
+                    <label class="control-label" for="inputKategorie">Kategorie:</label>
+                    <div class="controls"><span id="inputKategorie">Auto</span></div>
                 </div>
 
                 <div class="control-group">
@@ -95,12 +90,14 @@
                            "inputWahrung">W&#228;hrung:</label>
 
                     <div class="controls">
-                        <span class="input"><select id="inputWahrung">
+                        <span class="input">
+                            <select id="inputWahrung">
                                 <option>Euro</option>
                                 <option>Dollar</option>
                                 <option>Yen</option>
                                 <option>Pfund</option>
-                            </select></span>
+                            </select>
+                        </span>
                     </div>
                 </div>
 
@@ -117,7 +114,8 @@
                            "inputWiederholung">Wiederholung:</label>
 
                     <div class="controls">
-                        <span class="input"><select id="inputWiederholung">
+                        <span class="input">
+                            <select id="inputWiederholung">
                                 <option>
                                     Einmalig
                                 </option>
@@ -137,40 +135,8 @@
                                 <option>
                                     J&#228;hrlich
                                 </option>
-                            </select></span>
-                    </div>
-                </div>
-
-                <div class="control-group">
-                    <label class="control-label" for=
-                           "inputKategorie">Kategorie:</label>
-
-                    <div class="controls">
-                        <span class="input"><select id="inputKategorie">
-                                <option>
-                                    Essen
-                                </option>
-
-                                <option>
-                                    Kino
-                                </option>
-
-                                <option>
-                                    Sonstiges
-                                </option>
-
-                                <option>
-                                    Urlaub
-                                </option>
-                            </select></span>
-                    </div>
-                </div>
-
-                <div class="control-group">
-                    <label class="control-label" for="inputSpeichern">Als Vorlage speichern:</label>
-
-                    <div class="controls">
-                        <input id="inputSpeichern" type="checkbox">
+                            </select>
+                        </span>
                     </div>
                 </div>
 
@@ -195,21 +161,20 @@
 
             <footer>
                 <p>&copy; Gruppe 70 2012</p>
-            </footer>    
+            </footer>
 
         </div><!--/.fluid-container-->
+
         <!-- Le javascript
-          ================================================== -->
+        ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="http://code.jquery.com/jquery-latest.min.js" type=
-                "text/javascript">
-        </script><script src="js/bootstrap.min.js" type="text/javascript">
-        </script><script src="js/bootstrap-datepicker.js" type=
-                         "text/javascript">
-        </script><script type="text/javascript">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-datepicker.js"></script>
+        <script>
             $(function(){
                 window.prettyPrint && prettyPrint();
-                $('#dp1').datepicker();         
+                $('#dp1').datepicker();		
             });
         </script>
     </body>

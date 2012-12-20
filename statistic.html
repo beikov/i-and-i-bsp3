@@ -1,214 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Finanz2Go - Statistik</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="group 70">
+    <head>
+        <meta charset="utf-8">
+        <title>Finanz2Go - Statistik</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="group 70">
 
-    <!-- Le styles -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-	  .uebersicht-control-label{
-		padding-top: 5px;
-	  }
-    </style>
-    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+        <!-- Le styles -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <style type="text/css">
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+            .dl-horizontal dt{
+                width: 220px;
+            }
+            .dl-horizontal dd{
+                margin-left: 230px;
+            }
+            .dl-horizontal .sub dt{
+                width: 80px;
+            }
+            .dl-horizontal .sub dd{
+                margin-left: 100px;
+            }
+        </style>
+        <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
 
-    <!-- Fav and touch icons -->
-	
-	<!--
-    <link rel="shortcut icon" href="ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
-	-->
-  </head>
+    <body>
 
-  <body>
-
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="index.html">Finanz2Go</a>
-          <div class="nav-collapse collapse">
-            <p class="navbar-text pull-right">
-			  <span>
-              Logged in as <a href="#" class="navbar-link">Team 70</a>
-			  </span>
-			  <span><a href="#">Logout</a></span>
-            </p>
-            <ul class="nav">
-              <li><a href="index.html">Übersicht</a></li>
-              <li><a href="expense.html">Ausgaben</a></li>
-              <li><a href="category.html">Kategorien</a></li>
-              <li class="active"><a href="statistic.html">Statistik</a></li>
-			  <li><a href="presets.html">Vorlagen</a></li>
-              <li><a href="settings.html">Einstellungen</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="index.html">Finanz2Go</a>
+                    <div class="nav-collapse collapse">
+                        <p class="navbar-text pull-right">
+                            <span>
+                                Logged in as <a href="#" class="navbar-link">Team 70</a>
+                            </span>
+                            <span><a href="#">Logout</a></span>
+                        </p>
+                        <ul class="nav">
+                            <li><a href="index.html">&Uuml;bersicht</a></li>
+                            <li><a href="expense.html">Ausgaben</a></li>
+                            <li><a href="category.html">Kategorien</a></li>
+                            <li class="active"><a href="statistic.html">Statistik</a></li>
+                            <li><a href="presets.html">Vorlagen</a></li>
+                            <li><a href="settings.html">Einstellungen</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <div class="container">
+        <div class="container">
 
-	  <ul class="breadcrumb">
-		<li><a href="statistic.html">Statistik</a></li>
-	  </ul>
-	  
-      <div class="row">
-        <div class="span12">
-          <h1 style="float:left;margin-right:20px;">Statistik</h1>
-		  <button class="btn" style="margin-top:15px;">
-		    <span class="icon-refresh"></span> Aktualisieren
-		  </button>
-		</div>
-      </div>
-	  
-	  <div class="row">
-		  <div class="span12">
-			W&auml;hlen Sie bestimmte Kategorien und Zeitraum, um Statistiken einer eingeschr&auml;nkten Menge an Ausgaben zu erstellen.
-		  </div>
-	  </div>
-	  <p/>
-	  
-	  <form class="form-horizontal">
-		<fieldset>
-			<div class="control-group">
-				<label class="control-label">Von:</label>
-				<div class="controls">
-					<input type="text" value="01.12.2012"/>
-					<button class="btn"><i class="icon-calendar"></i></button>
-				</div>
-			</div>
-			<div class="control-group">
-				<label class="control-label">Bis:</label>
-				<div class="controls">
-					<input type="text" value="31.12.2012"/>
-					<button class="btn"><i class="icon-calendar"></i></button>
-				</div>
-			</div>
-			<div class="control-group">
-				<label class="control-label">Kategorien:</label>
-				<div class="controls">
-					<label class="checkbox">
-						<input type="checkbox" name="kategorie" value="" checked/>
-						Alle w&auml;hlen
-					</label>
-					<label class="checkbox">
-						<input type="checkbox" name="kategorie" value="" checked/>
-						Nahrungsmittel
-					</label>
-					<label class="checkbox">
-						<input type="checkbox" name="kategorie" value="" checked/>
-						Kleidung
-					</label>
-					<label class="checkbox">
-						<input type="checkbox" name="kategorie" value="" checked/>
-						Auto
-					</label>
-				</div>
-			</div>
-		</fieldset>
-	   </form>
-	   
+            <ul class="breadcrumb">
+                <li><a href="statistic.html">Statistik</a></li>
+            </ul>
 
-	   <fieldset class="form-horizontal">
-			<legend>&Uuml;bersicht</legend>
-	
-			<div class="control-group">
-			<label class="control-label">Durchschnittl. Ausgaben / Tag:</label>
-			<div class="controls">
-				<label class="uebersicht-control-label">€ 50,23</label>
-			</div>
-			</div>
-		
-			<div class="control-group">
-				<label class="control-label">Teuerster Tag:</label>
-				<div class="controls">
-					<label class="uebersicht-control-label">19.11.2012 (€ 180,-)</label>
-				</div>
-			</div>
-			<div class="control-group">
-				<label class="control-label">Sparsamster Tag:</label>
-				<div class="controls">
-					<label class="uebersicht-control-label">22.11.2012 (€ 0,-)</label>
-				</div>
-			</div>
-			<div class="control-group">
-				<label class="control-label">Summe der Ausgaben:</label>
-				<div class="controls">
-					<label class="uebersicht-control-label">€ 553,23</label>
-				</div>
-			</div>
-			<div style="clear:both;">
-				<label><b>Auslastung des Limits f&uuml;r</b></label>
-			</div>
-			<div class="control-group">
-				<label class="control-label">Kleidung:</label>
-				<div class="controls" style="padding-top:5px">
-					<meter max="100" min="0" value="112">
-						
-					</meter>
-					<span style="padding-left:5px;">112 %</span>
-				</div>
-			</div>
-			<div class="control-group">
-				<label class="control-label">Auto:</label>
-				<div class="controls" style="padding-top:5px">
-					<meter max="100" min="0" value="20">
-						
-					</meter>
-					<span style="padding-left:5px;">20 %</span>
-				</div>
-			</div>
-			
-		
-	   </fieldset>
-	   <fieldset>
-			<legend>Diagramme</legend>
-			
-			<div style="float:left;margin-right:20px;">
-				<label>Verteilung nach Kategorien:</label>
-				<img src="img/verteilung_kategorien.png" />
-			</div>
-			<div>
-				<label>Ausgabenverlauf:</label>
-				<img src="img/ausgaben_verlauf.png" />
-			</div>
-	   </fieldset>
-	   <p/>
-	  
-      <hr/>
+            <div class="row">
+                <div class="span12">
+                    <h1 style="float:left;margin-right:20px;">Statistik</h1>
+                    <button class="btn" style="margin-top:15px;">
+                        <span class="icon-refresh"></span> Aktualisieren
+                    </button>
+                </div>
+            </div>
 
-      <footer>
-        <p>&copy; Gruppe 70 2012</p>
-      </footer>
+            <div class="row">
+                <div class="span12">
+                    W&auml;hlen Sie bestimmte Kategorien und Zeitraum, um Statistiken einer eingeschr&auml;nkten Menge an Ausgaben zu erstellen.
+                </div>
+            </div>
 
-    </div><!--/.fluid-container-->
+            <form class="form-horizontal" style="margin-top: 10px;">
+                <fieldset>
+                    <div class="row">
+                        <div class="span4">
+                            <div class="control-group">
+                                <label class="control-label">Kategorien:</label>
+                                <div class="controls">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="kategorie" value="" checked="checked"/>
+                                        Alle w&auml;hlen
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="kategorie" value="" checked="checked"/>
+                                        Nahrungsmittel
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="kategorie" value="" checked="checked"/>
+                                        Kleidung
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="kategorie" value="" checked="checked"/>
+                                        Auto
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span2">
+                            <div class="control-group">
+                                <label class="control-label" for="inputFrom">Von:</label>
+                                <div class="controls">
+                                    <input type="date" id="inputFrom" placeholder="Von"/>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="inputTo">Bis:</label>
+                                <div class="controls">
+                                    <input type="date" id="inputTo" placeholder="Bis"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
 
-  </body>
+            <div class="row">
+                <div class="span7">
+                    <h2>&Uuml;bersicht</h2>
+
+                    <dl class="dl-horizontal">
+                        <dt>Durchschnittl. Ausgaben / Tag:</dt>
+                        <dd>&euro; 50,23</dd>
+                        
+                        <dt>Teuerster Tag:</dt>
+                        <dd>19.11.2012 (&euro; 180,-)</dd>
+                        
+                        <dt>Sparsamster Tag:</dt>
+                        <dd>22.11.2012 (&euro; 0,-)</dd>
+                        
+                        <dt>Summe der Ausgaben:</dt>
+                        <dd>&euro; 553,23</dd>
+                        
+                        <dt><b>Auslastung des Limits f&uuml;r</b></dt>
+                        <dd>
+                            <div>
+                            <dl class="dl-horizontal sub">
+                                <dt>Kleidung:</dt>
+                                <dd><meter max="100" min="0" value="112"></meter><span style="padding-left:5px;">112 %</span></dd>
+                                
+                                <dt>Auto:</dt>
+                                <dd><meter max="100" min="0" value="20"></meter><span style="padding-left:5px;">20 %</span></dd>
+                            </dl>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                
+                <div class="span4 pull-left">
+                    <h2>Diagramme</h2>
+
+                    <div class="span2">
+                        <p>Verteilung nach Kategorien:</p>
+                        <img src="img/verteilung_kategorien.png" />
+                    </div>
+                    <div class="span2">
+                        <p>Ausgabenverlauf:</p>
+                        <img src="img/ausgaben_verlauf.png" />
+                    </div>
+                </div>
+            </div>
+
+            <hr/>
+
+            <footer>
+                <p>&copy; Gruppe 70 2012</p>
+            </footer>
+
+        </div><!--/.fluid-container-->
+
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+    </body>
 </html>

@@ -1,122 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Finanz2Go - Kategorie hinzufügen</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="group 70">
+    <head>
+        <meta charset="utf-8">
+        <title>Finanz2Go - Kategorie hinzufügen</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="group 70">
 
-    <!-- Le styles -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-    </style>
-    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+        <!-- Le styles -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <style type="text/css">
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        </style>
+        <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
 
-    <!-- Fav and touch icons -->
-	
-	<!--
-    <link rel="shortcut icon" href="ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
-	-->
-  </head>
+    <body>
 
-  <body>
-
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="index.html">Finanz2Go</a>
-          <div class="nav-collapse collapse">
-            <p class="navbar-text pull-right">
-			  <span>
-              Logged in as <a href="#" class="navbar-link">Team 70</a>
-			  </span>
-			  <span><a href="#">Logout</a></span>
-            </p>
-            <ul class="nav">
-              <li><a href="index.html">Übersicht</a></li>
-              <li><a href="expense.html">Ausgaben</a></li>
-              <li class="active"><a href="category.html">Kategorien</a></li>
-              <li><a href="statistic.html">Statistik</a></li>
-			  <li><a href="presets.html">Vorlagen</a></li>
-              <li><a href="settings.html">Einstellungen</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="index.html">Finanz2Go</a>
+                    <div class="nav-collapse collapse">
+                        <p class="navbar-text pull-right">
+                            <span>
+                                Logged in as <a href="#" class="navbar-link">Team 70</a>
+                            </span>
+                            <span><a href="#">Logout</a></span>
+                        </p>
+                        <ul class="nav">
+                            <li><a href="index.html">&Uuml;bersicht</a></li>
+                            <li><a href="expense.html">Ausgaben</a></li>
+                            <li class="active"><a href="category.html">Kategorien</a></li>
+                            <li><a href="statistic.html">Statistik</a></li>
+                            <li><a href="presets.html">Vorlagen</a></li>
+                            <li><a href="settings.html">Einstellungen</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <div class="container">
+        <div class="container">
 
-	  <ul class="breadcrumb">
-		<li><a href="category.html">Kategorien</a> <span class="divider">/</span></li>
-		<li>Kategorie hinzufügen</li>
-	  </ul>
-	  
-      <div class="row">
-        <div class="span12">
-          <h1>Kategorie hinzufügen</h1>
-		</div>
-      </div>
-	  
-	  <form class="form-horizontal">
-		<div class="control-group">
-			<label class="control-label" for="inputName">Name</label>
-			<div class="controls">
-				<input type="text" id="inputName" placeholder="Name">
-			</div>
-		</div>
-		<div id="limitGroup" class="accordion">
-			<div class="accordion-group">
-				
-			</div>
-		</div>
-		<div class="control-group">
-		  <a class="btn btn-primary" href="limitAdd.html">
-		    <span class="icon-plus"></span> Limit hinzufügen
-		  </a>
-		</div>
-		<div class="control-group">
-		  <button class="btn btn-success">
-		    <span class="icon-ok"></span> Speichern
-		  </button>
-		  <button class="btn">
-		    Abbrechen
-		  </button>
-		</div>
-	  </form>
+            <ul class="breadcrumb">
+                <li><a href="category.html">Kategorien</a> <span class="divider">/</span></li>
+                <li>Kategorie hinzuf&uuml;gen</li>
+            </ul>
 
-      <hr>
+            <div class="row">
+                <div class="span12">
+                    <h1>Kategorie hinzuf&uuml;gen</h1>
+                </div>
+            </div>
 
-      <footer>
-        <p>&copy; Gruppe 70 2012</p>
-      </footer>
+            <form class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label" for="inputName">Name</label>
+                    <div class="controls">
+                        <input type="text" id="inputName" placeholder="Name">
+                    </div>
+                </div>
+                <div>
+                    <h3>Limits</h3>
+                </div>
+                <div id="limitGroup" class="accordion">
+                    <div id="noLimits">
+                        <span class="accordion-toggle">
+                            Keine Limits verf&uuml;gbar
+                        </span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <a id="addLimit" class="btn btn-primary" href="#">
+                        <span class="icon-plus"></span> Limit hinzuf&uuml;gen
+                    </a>
+                </div>
+                <div class="control-group">
+                    <button class="btn btn-success">
+                        <span class="icon-ok"></span> Speichern
+                    </button>
+                    <button class="btn">
+                        Abbrechen
+                    </button>
+                </div>
+            </form>
 
-    </div><!--/.fluid-container-->
+            <hr>
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+            <footer>
+                <p>&copy; Gruppe 70 2012</p>
+            </footer>
 
-  </body>
+        </div><!--/.fluid-container-->
+
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+
+        <script type="text/javascript">
+            $( document ).ready( function() {
+                $( "#addLimit" ).click( function(e) {
+                    e.preventDefault();
+                    
+                    var currentId = 0;
+                    var limits = $( "#limitGroup" ).find(".accordion-heading");
+                    
+                    if(limits.length != 0){
+                        currentId = parseInt(limits.last().attr('id').substring("toggleLimit".length));
+                    } else {
+                        $( "#noLimits" ).remove();
+                    }
+                    
+                    var nextId = currentId + 1;
+                    var newLimit="";
+                    newLimit += "                    <div class=\"accordion-group\">";
+                    newLimit += "                        <div id=\"toggleLimit" + nextId + "\" class=\"accordion-heading\">";
+                    newLimit += "                            <a class=\"accordion-toggle\" data-toggle=\"collapse\" href=\"#limit" + nextId + "\">";
+                    newLimit += "                                Neues Limit";
+                    newLimit += "                            <\/a>";
+                    newLimit += "                        <\/div>";
+                    newLimit += "                        <div id=\"limit" + nextId + "\" class=\"accordion-body collapse\">";
+                    newLimit += "                            <div class=\"accordion-inner\">";
+                    newLimit += "                                <div class=\"control-group\">";
+                    newLimit += "                                    <label class=\"control-label\" for=\"inputLimit" + nextId + "\">Limit<\/label>";
+                    newLimit += "                                    <div class=\"controls\">";
+                    newLimit += "                                        <input type=\"text\" id=\"inputLimit" + nextId + "\" placeholder=\"Limit\">";
+                    newLimit += "                                    <\/div>";
+                    newLimit += "                                <\/div>";
+                    newLimit += "                                <div class=\"control-group\">";
+                    newLimit += "                                    <label class=\"control-label\" for=\"inputCurrency" + nextId + "\">W&auml;hrung<\/label>";
+                    newLimit += "                                    <div class=\"controls\">";
+                    newLimit += "                                        <select id=\"inputCurrency" + nextId + "\">";
+                    newLimit += "                                            <option>Euro<\/option>";
+                    newLimit += "                                            <option>Dollar<\/option>";
+                    newLimit += "                                        <\/select>";
+                    newLimit += "                                    <\/div>";
+                    newLimit += "                                <\/div>";
+                    newLimit += "                                <div class=\"control-group\">";
+                    newLimit += "                                    <label class=\"control-label\" for=\"inputRecurrence" + nextId + "\">Wiederholung<\/label>";
+                    newLimit += "                                    <div class=\"controls\">";
+                    newLimit += "                                        <select id=\"inputRecurrence" + nextId + "\">";
+                    newLimit += "                                            <option>Einmalig<\/option>";
+                    newLimit += "                                            <option>W&ouml;chentlich<\/option>";
+                    newLimit += "                                            <option>Monatlich<\/option>";
+                    newLimit += "                                            <option>J&auml;hrlich<\/option>";
+                    newLimit += "                                        <\/select>";
+                    newLimit += "                                    <\/div>";
+                    newLimit += "                                <\/div>";
+                    newLimit += "                                <div class=\"control-group\">";
+                    newLimit += "                                    <label class=\"control-label\" for=\"inputFrom" + nextId + "\">Von<\/label>";
+                    newLimit += "                                    <div class=\"controls\">";
+                    newLimit += "                                        <input type=\"date\" id=\"inputFrom" + nextId + "\" placeholder=\"Von\"\/>";
+                    newLimit += "                                    <\/div>";
+                    newLimit += "                                <\/div>";
+                    newLimit += "                                <div class=\"control-group\">";
+                    newLimit += "                                    <label class=\"control-label\" for=\"inputTo" + nextId + "\">Bis<\/label>";
+                    newLimit += "                                    <div class=\"controls\">";
+                    newLimit += "                                        <input type=\"date\" id=\"inputTo" + nextId + "\" placeholder=\"Bis\"\/>";
+                    newLimit += "                                    <\/div>";
+                    newLimit += "                                <\/div>";
+                    newLimit += "                                <div class=\"control-group\">";
+                    newLimit += "                                    <button class=\"btn btn-danger\" onclick=\"removeLimit(" + nextId + ")\">";
+                    newLimit += "                                        <span class=\"icon-trash\"><\/span> L&ouml;schen";
+                    newLimit += "                                    <\/button>";
+                    newLimit += "                                <\/div>";
+                    newLimit += "                            <\/div>";
+                    newLimit += "                        <\/div>";
+                    newLimit += "                    <\/div>";
+
+                    $( "#limitGroup" ).append(newLimit);
+                })
+        		
+        		
+            })
+            
+            function removeLimit(id){
+                $( "#limit" + id ).closest( ".accordion-group" ).remove();
+                
+                if($( "#limitGroup" ).find(".accordion-heading").length == 0){
+                    var newLimit="";
+                    newLimit += "                    <div id=\"noLimits\">";
+                    newLimit += "                        <span class=\"accordion-toggle\">";
+                    newLimit += "                            Keine Limits verf&uuml;gbar";
+                    newLimit += "                        <\/span>";
+                    newLimit += "                    <\/div>";
+
+                    $( "#limitGroup" ).append(newLimit);
+                }
+            }
+        </script>
+    </body>
 </html>

@@ -1,146 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Finanz2Go - Vorlagenauswahl</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="group 70">
+    <head>
+        <meta charset="utf-8">
+        <title>Finanz2Go - Vorlagenauswahl</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="group 70">
 
-    <!-- Le styles -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-    </style>
-    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+        <!-- Le styles -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <style type="text/css">
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+        </style>
+        <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
 
-    <!-- Fav and touch icons -->
-	
-	<!--
-    <link rel="shortcut icon" href="ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
-	-->
-  </head>
+    <body>
 
-  <body>
-
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="index.html">Finanz2Go</a>
-          <div class="nav-collapse collapse">
-            <p class="navbar-text pull-right">
-			  <span>
-              Logged in as <a href="#" class="navbar-link">Team 70</a>
-			  </span>
-			  <span><a href="#">Logout</a></span>
-            </p>
-            <ul class="nav">
-              <li><a href="index.html">Übersicht</a></li>
-              <li><a href="expense.html">Ausgaben</a></li>
-              <li><a href="category.html">Kategorien</a></li>
-              <li><a href="statistic.html">Statistik</a></li>
-			  <li class="active"><a href="presets.html">Vorlagen</a></li>
-              <li><a href="settings.html">Einstellungen</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="index.html">Finanz2Go</a>
+                    <div class="nav-collapse collapse">
+                        <p class="navbar-text pull-right">
+                            <span>
+                                Logged in as <a href="#" class="navbar-link">Team 70</a>
+                            </span>
+                            <span><a href="#">Logout</a></span>
+                        </p>
+                        <ul class="nav">
+                            <li><a href="index.html">&Uuml;bersicht</a></li>
+                            <li class="active"><a href="expense.html">Ausgaben</a></li>
+                            <li><a href="category.html">Kategorien</a></li>
+                            <li><a href="statistic.html">Statistik</a></li>
+                            <li><a href="presets.html">Vorlagen</a></li>
+                            <li><a href="settings.html">Einstellungen</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <div class="container">
+        <div class="container">
 
-	  <ul class="breadcrumb">
-		<li><a href="expense.html">Ausgabe</a> <span class="divider">/</span></li>
-		<li>Vorlagenauswahl</li>
-	  </ul>
-	  
-      <div class="row">
-        <div class="span12" style="position: relative;">
-          <h1>
-          	Vorlage auswählen <span style="position: absolute; left: 540px;">oder</span><a href="expenseAdd.html" style="position: absolute; left: 749px;">neue Ausgabe anlegen</a>
-          </h1>
-		</div>
-      </div>
-	  
-      <div class="row" id="main">
-        <div class="span5">
-		  <table class="table">
-			<thead>
-				<tr>
-					<th>Vorlage</th>
-					<th>Kategorie</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Nahrungsmittel Einkauf</td>
-					<td>Nahrungsmittel</td>
-				</tr>
-				<tr>
-					<td>Parkticket</td>
-					<td>Auto</td>
-				</tr>
-				<tr>
-					<td><a href="expenseAddWithPreset_Treibstoff.html">Treibstoff</a></td>
-					<td>Auto</td>
-				</tr>
-				<tr>
-					<td>U-Bahn Ticket</td>
-					<td>&Ouml;ffis</td>
-				</tr>
-			</tbody>
-		</table>
-		</div>
-		<span class="span2" align="center">
-		<canvas id="seperator" style="border: 1px solid #FFF;" width="1" align="center"></canvas>
-		</span>
-      </div>
+            <ul class="breadcrumb">
+                <li><a href="expense.html">Ausgabe</a> <span class="divider">/</span></li>
+                <li>Vorlagenauswahl</li>
+            </ul>
 
-      <hr/>
+            <div class="row">
+                <div class="span12" style="position: relative;">
+                    <h1>
+                        Vorlage ausw&auml;hlen <span style="position: absolute; left: 540px;">oder</span><a href="expenseAdd.html" style="position: absolute; left: 749px;">neue Ausgabe anlegen</a>
+                    </h1>
+                </div>
+            </div>
 
-      <footer>
-        <p>&copy; Gruppe 70 2012</p>
-      </footer>
+            <div class="row" id="main">
+                <div class="span5">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Vorlage</th>
+                                <th>Kategorie</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="expenseAddWithPreset.html">Nahrungsmittel Einkauf</a></td>
+                                <td>Nahrungsmittel</td>
+                            </tr>
+                            <tr>
+                                <td><a href="expenseAddWithPreset.html">Parkticket</a></td>
+                                <td>Auto</td>
+                            </tr>
+                            <tr>
+                                <td><a href="expenseAddWithPreset.html">Treibstoff</a></td>
+                                <td>Auto</td>
+                            </tr>
+                            <tr>
+                                <td><a href="expenseAddWithPreset.html">U-Bahn Ticket</a></td>
+                                <td>&Ouml;ffis</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <span class="span2" style="text-align: center">
+                    <canvas id="seperator" style="border: 1px solid #FFF; text-align: center;" width="1"></canvas>
+                </span>
+            </div>
 
-    </div><!--/.fluid-container-->
+            <hr/>
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script>
+            <footer>
+                <p>&copy; Gruppe 70 2012</p>
+            </footer>
+
+        </div><!--/.fluid-container-->
+
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
     	
-    	var seperator = document.getElementById("seperator");
-    	var main = document.getElementById("main")
+            var seperator = document.getElementById("seperator");
+            var main = document.getElementById("main")
     	
-    	seperator.height = main.clientHeight;
+            seperator.height = main.clientHeight;
     
 	    
-	    var seperator_context = seperator.getContext("2d");
+            var seperator_context = seperator.getContext("2d");
 
-	    seperator_context.beginPath();
-	    seperator_context.moveTo(seperator.width/2, 0);
-	    seperator_context.lineTo(seperator.width/2, seperator.height);
-	    seperator_context.stroke();
-	</script>
+            seperator_context.beginPath();
+            seperator_context.moveTo(seperator.width/2, 0);
+            seperator_context.lineTo(seperator.width/2, seperator.height);
+            seperator_context.stroke();
+        </script>
 
-  </body>
+    </body>
 </html>
