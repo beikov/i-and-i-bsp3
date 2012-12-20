@@ -74,17 +74,15 @@
                            "inputBezeichnung">Bezeichnung:</label>
 
                     <div class="controls">
-                        <input type="text" id="inputBezeichnung" placeholder=
-                               "Bezeichnung">
+                        <input type="text" id="inputBezeichnung" value="Neue Schuhe" placeholder="Bezeichnung">
                     </div>
                 </div>
 
                 <div class="control-group">
-                    <label class="control-label" for=
-                           "inputBetrag">Betrag:</label>
+                    <label class="control-label" for="inputBetrag">Betrag:</label>
 
                     <div class="controls">
-                        <input type="text" id="inputBetrag" placeholder="Betrag">
+                        <input type="text" id="inputBetrag" value="60" placeholder="Betrag">
                     </div>
                 </div>
 
@@ -95,7 +93,7 @@
                     <div class="controls">
                         <span class="input">
                             <select id="inputWahrung">
-                                <option>Euro</option>
+                                <option selected="selected">Euro</option>
                                 <option>Dollar</option>
                                 <option>Yen</option>
                                 <option>Pfund</option>
@@ -108,7 +106,7 @@
                     <label class="control-label" for="inputDatum">Datum:</label>
 
                     <div class="controls">
-                        <input id="inputDatum" type="date" placeholder="Von"/>
+                        <input id="inputDatum" type="date" value="19.11.2012" placeholder="Von"/>
                     </div>
                 </div>
 
@@ -119,51 +117,28 @@
                     <div class="controls">
                         <span class="input">
                             <select id="inputWiederholung">
-                                <option>
-                                    Einmalig
-                                </option>
-
-                                <option>
-                                    T&#228;glich
-                                </option>
-
-                                <option>
-                                    W&#246;chentlich
-                                </option>
-
-                                <option>
-                                    Monatlich
-                                </option>
-
-                                <option>
-                                    J&#228;hrlich
-                                </option>
-                            </select></span>
+                                <option selected="selected">Einmalig</option>
+                                <option>T&#228;glich</option>
+                                <option>W&#246;chentlich</option>
+                                <option>Monatlich</option>
+                                <option>J&#228;hrlich</option>
+                            </select>
+                        </span>
                     </div>
                 </div>
 
                 <div class="control-group">
-                    <label class="control-label" for=
-                           "inputKategorie">Kategorie:</label>
+                    <label class="control-label" for="inputKategorie">Kategorie:</label>
 
                     <div class="controls">
-                        <span class="input"><select id="inputKategorie">
-                                <option>
-                                    Essen
-                                </option>
-
-                                <option>
-                                    Kino
-                                </option>
-
-                                <option>
-                                    Sonstiges
-                                </option>
-
-                                <option>
-                                    Urlaub
-                                </option>
-                            </select></span>
+                        <span class="input">
+                            <select id="inputKategorie">
+                                <option>Essen</option>
+                                <option>Kino</option>
+                                <option selected="selected">Sonstiges</option>
+                                <option>Urlaub</option>
+                            </select>
+                        </span>
                     </div>
                 </div>
 
@@ -186,7 +161,7 @@
                     <button class="btn btn-success">
                         <span class="icon-ok"></span> Speichern
                     </button>
-                    <button class="btn btn-danger">
+                    <button class="btn btn-danger" data-target="#deleteDialog" data-toggle="modal">
                         <span class="icon-trash"></span> L&ouml;schen
                     </button>
                     <button class="btn">
@@ -195,6 +170,20 @@
                 </div>
             </form>
 
+            <!-- Modal -->
+            <div id="deleteDialog" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-body">
+                    <p>Wirklich l&ouml;schen?</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-dismiss="modal">
+                        <span class="icon-trash"></span> Ja, L&ouml;schen
+                    </button>
+                    <button class="btn" data-dismiss="modal">
+                        Abbrechen
+                    </button>
+                </div>
+            </div>
             <hr>
 
             <footer>

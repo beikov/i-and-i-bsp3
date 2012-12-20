@@ -14,8 +14,17 @@
                 padding-top: 60px;
                 padding-bottom: 40px;
             }
-            .uebersicht-control-label{
-                padding-top: 5px;
+            .dl-horizontal dt{
+                width: 220px;
+            }
+            .dl-horizontal dd{
+                margin-left: 230px;
+            }
+            .dl-horizontal .sub dt{
+                width: 80px;
+            }
+            .dl-horizontal .sub dd{
+                margin-left: 100px;
             }
         </style>
         <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
@@ -77,111 +86,97 @@
                     W&auml;hlen Sie bestimmte Kategorien und Zeitraum, um Statistiken einer eingeschr&auml;nkten Menge an Ausgaben zu erstellen.
                 </div>
             </div>
-            <p/>
 
-            <form class="form-horizontal">
+            <form class="form-horizontal" style="margin-top: 10px;">
                 <fieldset>
-                    <div class="control-group">
-                        <label class="control-label" for="inputFrom">Von:</label>
-                        <div class="controls">
-                            <input type="date" id="inputFrom" placeholder="Von"/>
+                    <div class="row">
+                        <div class="span4">
+                            <div class="control-group">
+                                <label class="control-label">Kategorien:</label>
+                                <div class="controls">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="kategorie" value="" checked="checked"/>
+                                        Alle w&auml;hlen
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="kategorie" value="" checked="checked"/>
+                                        Nahrungsmittel
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="kategorie" value="" checked="checked"/>
+                                        Kleidung
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="kategorie" value="" checked="checked"/>
+                                        Auto
+                                    </label>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="inputTo">Bis:</label>
-                        <div class="controls">
-                            <input type="date" id="inputTo" placeholder="Bis"/>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label">Kategorien:</label>
-                        <div class="controls">
-                            <label class="checkbox">
-                                <input type="checkbox" name="kategorie" value="" checked="checked"/>
-                                Alle w&auml;hlen
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" name="kategorie" value="" checked="checked"/>
-                                Nahrungsmittel
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" name="kategorie" value="" checked="checked"/>
-                                Kleidung
-                            </label>
-                            <label class="checkbox">
-                                <input type="checkbox" name="kategorie" value="" checked="checked"/>
-                                Auto
-                            </label>
+                        <div class="span2">
+                            <div class="control-group">
+                                <label class="control-label" for="inputFrom">Von:</label>
+                                <div class="controls">
+                                    <input type="date" id="inputFrom" placeholder="Von"/>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="inputTo">Bis:</label>
+                                <div class="controls">
+                                    <input type="date" id="inputTo" placeholder="Bis"/>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </fieldset>
             </form>
 
 
-            <fieldset class="form-horizontal">
-                <legend>&Uuml;bersicht</legend>
+            <div class="row">
+                <div class="span7">
+                    <h2>&Uuml;bersicht</h2>
 
-                <div class="control-group">
-                    <label class="control-label">Durchschnittl. Ausgaben / Tag:</label>
-                    <div class="controls">
-                        <label class="uebersicht-control-label">€ 50,23</label>
+                    <dl class="dl-horizontal">
+                        <dt>Durchschnittl. Ausgaben / Tag:</dt>
+                        <dd>&euro; 50,23</dd>
+                        
+                        <dt>Teuerster Tag:</dt>
+                        <dd>19.11.2012 (&euro; 180,-)</dd>
+                        
+                        <dt>Sparsamster Tag:</dt>
+                        <dd>22.11.2012 (&euro; 0,-)</dd>
+                        
+                        <dt>Summe der Ausgaben:</dt>
+                        <dd>&euro; 553,23</dd>
+                        
+                        <dt><b>Auslastung des Limits f&uuml;r</b></dt>
+                        <dd>
+                            <div>
+                            <dl class="dl-horizontal sub">
+                                <dt>Kleidung:</dt>
+                                <dd><meter max="100" min="0" value="112"></meter><span style="padding-left:5px;">112 %</span></dd>
+                                
+                                <dt>Auto:</dt>
+                                <dd><meter max="100" min="0" value="20"></meter><span style="padding-left:5px;">20 %</span></dd>
+                            </dl>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                
+                <div class="span4 pull-left">
+                    <h2>Diagramme</h2>
+
+                    <div class="span2">
+                        <p>Verteilung nach Kategorien:</p>
+                        <img src="img/verteilung_kategorien.png" />
+                    </div>
+                    <div class="span2">
+                        <p>Ausgabenverlauf:</p>
+                        <img src="img/ausgaben_verlauf.png" />
                     </div>
                 </div>
-
-                <div class="control-group">
-                    <label class="control-label">Teuerster Tag:</label>
-                    <div class="controls">
-                        <label class="uebersicht-control-label">19.11.2012 (€ 180,-)</label>
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label">Sparsamster Tag:</label>
-                    <div class="controls">
-                        <label class="uebersicht-control-label">22.11.2012 (€ 0,-)</label>
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label">Summe der Ausgaben:</label>
-                    <div class="controls">
-                        <label class="uebersicht-control-label">€ 553,23</label>
-                    </div>
-                </div>
-                <div style="clear:both;">
-                    <label><b>Auslastung des Limits f&uuml;r</b></label>
-                </div>
-                <div class="control-group">
-                    <label class="control-label">Kleidung:</label>
-                    <div class="controls" style="padding-top:5px">
-                        <meter max="100" min="0" value="112">
-
-                        </meter>
-                        <span style="padding-left:5px;">112 %</span>
-                    </div>
-                </div>
-                <div class="control-group">
-                    <label class="control-label">Auto:</label>
-                    <div class="controls" style="padding-top:5px">
-                        <meter max="100" min="0" value="20">
-
-                        </meter>
-                        <span style="padding-left:5px;">20 %</span>
-                    </div>
-                </div>
-
-
-            </fieldset>
-            <fieldset>
-                <legend>Diagramme</legend>
-
-                <div style="float:left;margin-right:20px;">
-                    <label>Verteilung nach Kategorien:</label>
-                    <img src="img/verteilung_kategorien.png" />
-                </div>
-                <div>
-                    <label>Ausgabenverlauf:</label>
-                    <img src="img/ausgaben_verlauf.png" />
-                </div>
-            </fieldset>
+            </div>
 
             <hr/>
 

@@ -68,8 +68,23 @@
                     <a class="btn btn-primary" href="expenseEdit.html">
                         <span class="icon-pencil"></span> Bearbeiten
                     </a>
-                    <button class="btn btn-danger">
+                    <button class="btn btn-danger" data-target="#deleteDialog" data-toggle="modal">
                         <span class="icon-trash"></span> L&ouml;schen
+                    </button>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div id="deleteDialog" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-body">
+                    <p>Wirklich l&ouml;schen?</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-dismiss="modal">
+                        <span class="icon-trash"></span> Ja, L&ouml;schen
+                    </button>
+                    <button class="btn" data-dismiss="modal">
+                        Abbrechen
                     </button>
                 </div>
             </div>

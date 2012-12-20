@@ -87,7 +87,7 @@
                             <strong>&euro; 200 / &euro; 1.000</strong>
                         </div>
                     </div>
-                    <a style="display: block; margin-top: 20px;" href="expense.html">Ausgaben ansehen »</a>
+                    <a style="display: block; margin-top: 20px;" href="expense.html">Ausgaben ansehen &raquo;</a>
                 </div>
             </div>
 
@@ -156,7 +156,7 @@
         	
             function updateTotalMeter( current, max ) {
                 $( "#total" ).attr( { "value" : current, "max" : max } );
-                $( "#total" ).next().find( "strong" ).text( "&euro; " + current + " / &euro;" + max );
+                $( "#total" ).next().find( "strong" ).text( $("<div />").html("&euro;").text() + " " + current + " / " + $("<div />").html("&euro;").text() + max );
             }
         </script>
 
