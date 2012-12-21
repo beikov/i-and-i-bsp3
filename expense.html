@@ -46,7 +46,7 @@
                             <li class="active"><a href="expense.html">Ausgaben</a></li>
                             <li><a href="category.html">Kategorien</a></li>
                             <li><a href="statistic.html">Statistik</a></li>
-                            <li><a href="presets.html">Vorlagen</a></li>
+                            
                             <li><a href="settings.html">Einstellungen</a></li>
                         </ul>
                     </div><!--/.nav-collapse -->
@@ -138,28 +138,28 @@
                     <tbody>
                         <tr>
                             <td><strong>
-                                    <a href="#" class="icon-chevron-down" style="text-indent: -9999px;" onclick="if(this.innerHTML == '-'){ $('.category1').hide(); this.innerHTML = '+'; this.className = 'icon-chevron-right';} else { $('.category1').show(); this.innerHTML = '-'; this.className = 'icon-chevron-down';}">-</a><a href="categoryDetail.html">Kleidung</a>
+                                    <a href="#" class="icon-chevron-down" style="text-indent: -9999px;" onclick="if(this.innerHTML == '-'){ $('.category1').hide(); this.innerHTML = '+'; this.className = 'icon-chevron-right';} else { $('.category1').show(); this.innerHTML = '-'; this.className = 'icon-chevron-down';}">-</a><a href="categoryEdit.html">Kleidung</a>
                                 </strong></td>
                             <td></td>
                             <td></td>
                             <td></td>
                         </tr>
                         <tr class="category1">
-                            <td><a href="expenseDetail.html">Neue Schuhe</a></td>
+                            <td><a href="expenseEdit.html">Neue Schuhe</a></td>
                             <td>&euro; 60</td>
                             <td>19.11.2012</td>
-                            <td><a href="expenseEdit.html">Bearbeiten</a> | <a href="#deleteDialog" data-toggle="modal">L&ouml;schen</a></td>
+                            <td><a href="#deleteDialog" data-toggle="modal"><span class="icon-trash"/></a></td>
                         </tr>
                         <tr class="category1">
-                            <td><a href="expenseDetail.html">T-Shirts</a></td>
+                            <td><a href="expenseEdit.html">T-Shirts</a></td>
                             <td>&euro; 120</td>
                             <td>19.11.2012</td>
-                            <td><a href="expenseEdit.html">Bearbeiten</a> | <a href="#deleteDialog" data-toggle="modal">L&ouml;schen</a></td>
+                            <td><a href="#deleteDialog" data-toggle="modal"><span class="icon-trash"/></a></td>
                         </tr>
                         <tr>
                             <td>
                                 <strong>
-                                    <a href="#" class="icon-chevron-right" style="text-indent: -9999px;" onclick="if(this.innerHTML == '-'){ $('.category2').hide(); this.innerHTML = '+'; this.className = 'icon-chevron-right';} else { $('.category2').show(); this.innerHTML = '-'; this.className = 'icon-chevron-down';}">+</a><a href="categoryDetail.html">Nahrungsmittel</a>
+                                    <a href="#" class="icon-chevron-right" style="text-indent: -9999px;" onclick="if(this.innerHTML == '-'){ $('.category2').hide(); this.innerHTML = '+'; this.className = 'icon-chevron-right';} else { $('.category2').show(); this.innerHTML = '-'; this.className = 'icon-chevron-down';}">+</a><a href="categoryEdit.html">Nahrungsmittel</a>
                                 </strong>
                             </td>
                             <td></td>
@@ -167,10 +167,10 @@
                             <td></td>
                         </tr>
                         <tr class="category2" style="display: none;">
-                            <td><a href="expenseDetail.html">Tomaten</a></td>
+                            <td><a href="expenseEdit.html">Tomaten</a></td>
                             <td>&euro; 1,20</td>
                             <td>10.11.2012</td>
-                            <td><a href="expenseEdit.html">Bearbeiten</a> | <a href="#deleteDialog" data-toggle="modal">L&ouml;schen</a></td>
+                            <td><a href="#deleteDialog" data-toggle="modal"><span class="icon-trash"/></a></td>
                         </tr>
                     </tbody>
                 </table>

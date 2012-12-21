@@ -46,7 +46,7 @@
                             <li class="active"><a href="expense.html">Ausgaben</a></li>
                             <li><a href="category.html">Kategorien</a></li>
                             <li><a href="statistic.html">Statistik</a></li>
-                            <li><a href="presets.html">Vorlagen</a></li>
+                            
                             <li><a href="settings.html">Einstellungen</a></li>
                         </ul>
                     </div><!--/.nav-collapse -->
@@ -82,18 +82,22 @@
                             <tr>
                                 <td><a href="expenseAddWithPreset.html">Nahrungsmittel Einkauf</a></td>
                                 <td>Nahrungsmittel</td>
+								<td><a data-toggle="modal" href="#deleteDialog"><span class="icon-trash"/></a></td>
                             </tr>
                             <tr>
                                 <td><a href="expenseAddWithPreset.html">Parkticket</a></td>
                                 <td>Auto</td>
+								<td><a data-toggle="modal" href="#deleteDialog"><span class="icon-trash"/></a></td>
                             </tr>
                             <tr>
                                 <td><a href="expenseAddWithPreset.html">Treibstoff</a></td>
                                 <td>Auto</td>
+								<td><a data-toggle="modal" href="#deleteDialog"><span class="icon-trash"/></a></td>
                             </tr>
                             <tr>
                                 <td><a href="expenseAddWithPreset.html">U-Bahn Ticket</a></td>
                                 <td>&Ouml;ffis</td>
+								<td><a data-toggle="modal" href="#deleteDialog"><span class="icon-trash"/></a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -101,13 +105,29 @@
                 <span class="span2" style="text-align: center">
                     <canvas id="seperator" style="border: 1px solid #FFF; text-align: center;" width="1"></canvas>
                 </span>
+				
+				<div id="deleteDialog" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-body">
+						<p>Wirklich l&ouml;schen?</p>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-danger" data-dismiss="modal">
+							<span class="icon-trash"></span> Ja, L&ouml;schen
+						</button>
+						<button class="btn" data-dismiss="modal">
+							Abbrechen
+						</button>
+					</div>
             </div>
 
-            <hr/>
+			
+			<hr style="clear:both"/>
 
             <footer>
                 <p>&copy; Gruppe 70 2012</p>
             </footer>
+				 
+            
 
         </div><!--/.fluid-container-->
 
