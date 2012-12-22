@@ -65,7 +65,7 @@
                 <div class="span12">
                     <h1>&Uuml;bersicht</h1>
 					
-						<p style="float:left">Heutige Ausgaben:<span> &euro; 124,54</span>
+						<h2><p style="float:left">Heutige Ausgaben:<span> &euro; 124,54</span><h2>
 						<a class="btn btn-primary" href="expensePreset.html" style="margin-left:15px;">
 							<span class="icon-plus"></span>
 							Neue Ausgabe
@@ -77,7 +77,7 @@
 
             <div class="row" style="margin-bottom: 40px;">
                 <div class="span12">
-                    <h2>Ihre Gesamtausgaben
+                    <h3 class="muted">Ihre Gesamtausgaben
                         <select id="choose-month">
                             <option value="currentMonth" label="Diesen Monat">Diesen Monat</option>
                             <option value="november2012" label="November '12">November '12</option>
@@ -85,13 +85,14 @@
                             <option value="september2012" label="September '12">September '12</option>
                             <option value="august2012" label="August '12">August '12</option>
                         </select>
-                    </h2>
+                    </h3>
                     <p>
                     <div style="position: relative;">
-                        <meter id="total" value="200" min="0" max="1000" style="height: 50px; width: 100%;">
-                        </meter>
-                        <div style="position: absolute; top: 16px; left: 500px;">
-                            <strong>&euro; 200 / &euro; 1.000</strong>
+                        <div class="progress progress-striped active" style="height: 40px; width: 100%;">
+                            <div id="total" class="bar" style="width: 24%; height:100%;"></div>
+                        </div>
+                        <div style="position: absolute; top: 10px; left: 500px;">
+                            <strong>&euro; 240,20 / &euro; 1.000</strong>
                         </div>
                     </div>
                     <a style="display: block; margin-top: 20px;" href="expense.html">Ausgaben ansehen &raquo;</a>
@@ -100,25 +101,59 @@
 
             <div class="row">
                 <div class="span12">
-                    <h2>Ihre Kategorien</h2>
+                    <h2 class="muted">Ihre Kategorien</h2>
+                    <!--
                     <p>
                         <a href="categoryEdit.html">Kleidung</a>
                         <span>
-                            <meter value="480" min="0" max="600">
-                                <span>&euro; 480,-</span><span>&euro; 600,-</span>
+                            <meter value="180" min="0" max="600">
+                                <span>&euro; 180,-</span><span>&euro; 600,-</span>
                             </meter>
                         </span>
-                        <span>Heute ausgegeben &euro; 49,64</span>
+                        <span>Heute ausgegeben &euro; 180,00</span>
                     </p>
                     <p>
                         <a href="categoryEdit.html">Nahrungsmittel</a>
                         <span>
-                            <meter value="330" min="0" max="600">
-                                <span>&euro; 330,-</span><span>&euro; 600,-</span>
+                            <meter value="60.20" min="0" max="600">
+                                <span>&euro; 60,20,-</span><span>&euro; 600,-</span>
                             </meter>
                         </span>
-                        <span>Heute ausgegeben &euro; 78,3</span>
+                        <span>Heute ausgegeben &euro; 60,20</span>
                     </p>
+                     -->
+                    <table class="table">
+                      <thead>
+                        <tr>
+                        <td class="span2"></td>
+                        <td class="span3"></td>
+                        <td class="span1"></td>
+                        <td class="span4"></td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><a href="categoryEdit.html">Kleidung</a></td>
+                          <td>
+                            <div  class="progress progress-striped">
+                              <div class="bar" style="width: 30%;"></div>
+                            </div>
+                          </td>
+                          <td><small class="muted">30%</small></td>
+                          <td>Heute ausgegeben &euro; 180,00</td>
+                        </tr>
+                        <tr>
+                          <td><a href="categoryEdit.html">Nahrungsmittel</a></td>
+                          <td>
+                            <div  class="progress progress-striped">
+                              <div class="bar" style="width: 10%;"></div>
+                            </div>
+                          </td>
+                          <td><small class="muted">10%</small></td>
+                          <td>Heute ausgegeben &euro; 60,20</td>
+                        </tr>
+                      </tbody>
+                    </table>
                 </div>
             </div>
 
@@ -142,7 +177,7 @@
                     var chosen = $( this ).find( ":selected" );
         			
                     if ( chosen.val() == "currentMonth" ) {
-                        updateTotalMeter( 200, 1000 );
+                        updateTotalMeter( 240.20, 1000 );
                     }
                     else if ( chosen.val() == "november2012" ) {
                         updateTotalMeter( 967.99, 1000 );
@@ -162,7 +197,8 @@
             })
         	
             function updateTotalMeter( current, max ) {
-                $( "#total" ).attr( { "value" : current, "max" : max } );
+                
+                document.getElementById('total').style.width = (current/max * 100)+"%";
                 $( "#total" ).next().find( "strong" ).text( $("<div />").html("&euro;").text() + " " + current + " / " + $("<div />").html("&euro;").text() + max );
             }
         </script>
