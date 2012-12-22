@@ -1,196 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Finanz2Go - Statistik</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8">
+      <title>Finanz2Go - Statistik</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
-        <meta name="author" content="group 70">
-
-        <!-- Le styles -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <style type="text/css">
-            body {
-                padding-top: 60px;
-                padding-bottom: 40px;
-            }
-            .dl-horizontal dt{
-                width: 220px;
-            }
-            .dl-horizontal dd{
-                margin-left: 230px;
-            }
-            .dl-horizontal .sub dt{
-                width: 80px;
-            }
-            .dl-horizontal .sub dd{
-                margin-left: 100px;
-            }
-        </style>
-        <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-
-        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-          <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-    </head>
-
-    <body>
-
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="navbar-inner">
-                <div class="container-fluid">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </a>
-                    <a class="brand" href="index.html">Finanz2Go</a>
-                    <div class="nav-collapse collapse">
-                        <p class="navbar-text pull-right">
-                            <span>
-                                Logged in as <a href="#" class="navbar-link">Team 70</a>
-                            </span>
-                            <span><a href="#">Logout</a></span>
-                        </p>
-                        <ul class="nav">
-                            <li><a href="index.html">&Uuml;bersicht</a></li>
-                            <li><a href="expense.html">Ausgaben</a></li>
-                            <li><a href="category.html">Kategorien</a></li>
-                            <li class="active"><a href="statistic.html">Statistik</a></li>
-                            
-                            <li><a href="settings.html">Einstellungen</a></li>
-                        </ul>
-                    </div><!--/.nav-collapse -->
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-
-            <ul class="breadcrumb">
-                <li><a href="statistic.html">Statistik</a></li>
-            </ul>
-
-            <div class="row">
-                <div class="span12">
-                    <h1 style="float:left;margin-right:20px;">Statistik</h1>
-                    <button class="btn" style="margin-top:15px;">
-                        <span class="icon-refresh"></span> Aktualisieren
-                    </button>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="span12">
-                    W&auml;hlen Sie bestimmte Kategorien und Zeitraum, um Statistiken einer eingeschr&auml;nkten Menge an Ausgaben zu erstellen.
-                </div>
-            </div>
-
-            <form class="form-horizontal" style="margin-top: 10px;">
-                <fieldset>
-                    <div class="row">
-                        <div class="span4">
-                            <div class="control-group">
-                                <label class="control-label">Kategorien:</label>
-                                <div class="controls">
-                                    <label class="checkbox">
-                                        <input type="checkbox" name="kategorie" value="" checked="checked"/>
-                                        Alle w&auml;hlen
-                                    </label>
-                                    <label class="checkbox">
-                                        <input type="checkbox" name="kategorie" value="" checked="checked"/>
-                                        Nahrungsmittel
-                                    </label>
-                                    <label class="checkbox">
-                                        <input type="checkbox" name="kategorie" value="" checked="checked"/>
-                                        Kleidung
-                                    </label>
-                                    <label class="checkbox">
-                                        <input type="checkbox" name="kategorie" value="" checked="checked"/>
-                                        Auto
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="span2">
-                            <div class="control-group">
-                                <label class="control-label" for="inputFrom">Von:</label>
-                                <div class="controls">
-                                    <input type="date" id="inputFrom" placeholder="Von"/>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label" for="inputTo">Bis:</label>
-                                <div class="controls">
-                                    <input type="date" id="inputTo" placeholder="Bis"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </fieldset>
-            </form>
-
-
-            <div class="row">
-                <div class="span7">
-                    <h2>&Uuml;bersicht</h2>
-
-                    <dl class="dl-horizontal">
-                        <dt>Durchschnittl. Ausgaben / Tag:</dt>
-                        <dd>&euro; 50,23</dd>
-                        
-                        <dt>Teuerster Tag:</dt>
-                        <dd>19.11.2012 (&euro; 180,-)</dd>
-                        
-                        <dt>Sparsamster Tag:</dt>
-                        <dd>22.11.2012 (&euro; 0,-)</dd>
-                        
-                        <dt>Summe der Ausgaben:</dt>
-                        <dd>&euro; 553,23</dd>
-                        
-                        <dt><b>Auslastung des Limits f&uuml;r</b></dt>
-                        <dd>
-                            <div>
-                            <dl class="dl-horizontal sub">
-                                <dt>Kleidung:</dt>
-                                <dd><meter max="100" min="0" value="112"></meter><span style="padding-left:5px;">112 %</span></dd>
-                                
-                                <dt>Auto:</dt>
-                                <dd><meter max="100" min="0" value="20"></meter><span style="padding-left:5px;">20 %</span></dd>
-                            </dl>
-                            </div>
-                        </dd>
-                    </dl>
-                </div>
+          <meta name="author" content="group 70">
+            
+            <!-- Le styles -->
+            <link href="css/bootstrap.min.css" rel="stylesheet">
+              <style type="text/css">
+                body {
+                  padding-top: 60px;
+                  padding-bottom: 40px;
+                }
+                .dl-horizontal dt{
+                  width: 220px;
+                }
+                .dl-horizontal dd{
+                  margin-left: 230px;
+                }
+                .dl-horizontal .sub dt{
+                  width: 80px;
+                }
+                .dl-horizontal .sub dd{
+                  margin-left: 100px;
+                }
                 
-                <div class="span4 pull-left">
-                    <h2>Diagramme</h2>
-
-                    <div class="span2">
-                        <p>Verteilung nach Kategorien:</p>
-                        <img src="img/verteilung_kategorien.png" />
-                    </div>
-                    <div class="span2">
-                        <p>Ausgabenverlauf:</p>
-                        <img src="img/ausgaben_verlauf.png" />
-                    </div>
-                </div>
+                .table1 {
+                  width:100%;
+                  margin-bottom:0px;
+                }
+                </style>
+              <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+                
+                <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+                <!--[if lt IE 9]>
+                 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+                 <![endif]-->
+                </head>
+  
+  <body>
+    
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="index.html">Finanz2Go</a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+            <span>
+              Logged in as <a href="#" class="navbar-link">Team 70</a>
+            </span>
+            <span><a href="#">Logout</a></span>
+            </p>
+            <ul class="nav">
+              <li><a href="index.html">&Uuml;bersicht</a></li>
+              <li><a href="expense.html">Ausgaben</a></li>
+              <li><a href="category.html">Kategorien</a></li>
+              <li class="active"><a href="statistic.html">Statistik</a></li>
+              
+              <li><a href="settings.html">Einstellungen</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      
+      <ul class="breadcrumb">
+        <li><a href="statistic.html">Statistik</a></li>
+      </ul>
+      
+      <div class="row">
+        <div class="span12">
+          <h1 style="float:left;margin-right:20px;">Statistik</h1>
+          <button class="btn" style="margin-top:15px;">
+            <span class="icon-refresh"></span> Aktualisieren
+          </button>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="span12">
+          W&auml;hlen Sie bestimmte Kategorien und Zeitraum, um Statistiken einer eingeschr&auml;nkten Menge an Ausgaben zu erstellen.
+        </div>
+      </div>
+      
+      <div class="row" style="margin-top: 10px;">
+        <div class="span12 accordion" id="accordion2">
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <div class="accordion-toggle">
+                <a data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">Kategorien</a>
+                <span class="checkbox pull-right">
+                  <input type="checkbox" name="kategorie" value="" checked="checked"/>Alle w&auml;hlen
+                </span>
+              </div>
+              
             </div>
-
-            <hr/>
-
-            <footer>
-                <p>&copy; Gruppe 70 2012</p>
-            </footer>
-
-        </div><!--/.fluid-container-->
-
-        <!-- Le javascript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-
-    </body>
+            <div id="collapseOne" class="accordion-body collapse">
+              <div class="accordion-inner">
+                <div>
+                  <table class="table1">
+                    <thead>
+                      <td class="span4"></td>
+                      <td class="span4"></td>
+                      <td class="span4"></td>
+                      <td class="span4"></td>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <label class="checkbox">
+                            <input type="checkbox" name="kategorie" value="" checked="checked"/>Nahrungsmittel
+                          </label>
+                        </td>
+                        <td>
+                          <label class="checkbox">
+                            <input type="checkbox" name="kategorie" value="" checked="checked"/>Kleidung
+                          </label>
+                        </td>
+                        <td>
+                          <label class="checkbox">
+                            <input type="checkbox" name="kategorie" value="" checked="checked"/>Auto
+                          </label>
+                        </td>
+                        <td>
+                          <label class="checkbox">
+                            <input type="checkbox" name="kategorie" value="" checked="checked"/>Urlaub
+                          </label>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <form>
+        <fieldset>
+          <div class="row">
+            <div class="span4 control-group">
+              <label class="control-label" for="inputFrom">Von:</label>
+              <div class="controls">
+                <input type="date" id="inputFrom" placeholder="Von"/>
+              </div>
+            </div>
+            <div class="span6 offset1 control-group">
+              <label class="control-label" for="inputTo">Bis:</label>
+              <div class="controls">
+                <input type="date" id="inputTo" placeholder="Bis"/>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+      
+      
+      <div class="row">
+        <div class="span7">
+          <h2>&Uuml;bersicht</h2>
+          
+          <dl class="dl-horizontal">
+            <dt style="margin-top:10px">Durchschnittl. Ausgaben / Tag:</dt>
+            <dd style="margin-top:10px">&euro; 50,23</dd>
+            
+            <dt style="margin-top:10px">Teuerster Tag:</dt>
+            <dd style="margin-top:10px">19.11.2012 (&euro; 180,-)</dd>
+            
+            <dt style="margin-top:10px">Sparsamster Tag:</dt>
+            <dd style="margin-top:10px">22.11.2012 (&euro; 0,-)</dd>
+            
+            <dt style="margin-top:10px">Summe der Ausgaben:</dt>
+            <dd style="margin-top:10px">&euro; 553,23</dd>
+          </dl>
+          
+          
+          <h3 style="margin-top:10px"><b>Auslastung des Limits f&uuml;r</b></h3>
+          <dl class="dl-horizontal">
+            <dt class="muted" style="margin-top:10px">Kleidung:</dt>
+            <dd style="margin-top:10px;"><div class="progress progress-striped" style="height:20px;">
+              <div class="bar" style="width: 30%;"></div>
+            </div></dd>
+            
+            <dt class="muted" style="margin-top:10px">Nahrungsmittel:</dt>
+            <dd style="margin-top:10px">
+              <div  class="progress progress-striped">
+                <div class="bar" style="width: 10%;"></div>
+              </div></dd>
+          </dl>
+        </div>
+        
+        <div class="span4 pull-left">
+          <h2>Diagramme</h2>
+          
+          <div class="span2">
+            <p>Verteilung nach Kategorien:</p>
+            <img src="img/verteilung_kategorien.png" />
+          </div>
+          <div class="span2">
+            <p>Ausgabenverlauf:</p>
+            <img src="img/ausgaben_verlauf.png" />
+          </div>
+        </div>
+      </div>
+      
+      <hr/>
+      
+      <footer>
+        <p>&copy; Gruppe 70 2012</p>
+      </footer>
+      
+    </div><!--/.fluid-container-->
+    
+    <!-- Le javascript
+     ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+  </body>
 </html>
