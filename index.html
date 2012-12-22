@@ -92,7 +92,7 @@
                             <div id="total" class="bar" style="width: 24%; height:100%;"></div>
                         </div>
                         <div style="position: absolute; top: 10px; left: 500px;">
-                            <strong>&euro; 240,20 / &euro; 1.000</strong>
+                            <strong id="total-description">&euro; 240,20 / &euro; 1.000</strong>
                         </div>
                     </div>
                     <a style="display: block; margin-top: 20px;" href="expense.html">Ausgaben ansehen &raquo;</a>
@@ -199,7 +199,7 @@
             function updateTotalMeter( current, max ) {
                 
                 document.getElementById('total').style.width = (current/max * 100)+"%";
-                $( "#total" ).next().find( "strong" ).text( $("<div />").html("&euro;").text() + " " + current + " / " + $("<div />").html("&euro;").text() + max );
+                $('#total-description').text($("<div />").html("&euro;").text() + " " + current + " / " + $("<div />").html("&euro;").text() + max );
             }
         </script>
 
