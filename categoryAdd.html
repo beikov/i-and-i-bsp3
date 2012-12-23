@@ -132,9 +132,10 @@
                     var newLimit="";
                     newLimit += "                    <div class=\"accordion-group\">";
                     newLimit += "                        <div id=\"toggleLimit" + nextId + "\" class=\"accordion-heading\">";
-                    newLimit += "                            <a class=\"accordion-toggle\" data-toggle=\"collapse\" href=\"#limit" + nextId + "\">";
-                    newLimit += "                                Neues Limit";
-                    newLimit += "                            <\/a>";
+                    newLimit += "                            <div class=\"accordion-toggle\" data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#limit" + nextId + "\">";
+                    newLimit += "                                <i class=\"icon-chevron-down\" style=\"margin-right:5px\"></i>";
+                    newLimit += "                                <a>Neues Limit</a>";
+                    newLimit += "                            </div>";
                     newLimit += "                        <\/div>";
                     newLimit += "                        <div id=\"limit" + nextId + "\" class=\"accordion-body collapse\">";
                     newLimit += "                            <div class=\"accordion-inner\">";
