@@ -239,6 +239,13 @@
 
 
         <script type="text/javascript">
+        	if ( window.location.hash ) {
+        		var id = window.location.hash.split( "#limit" )[ 1 ];
+        	
+        		$( "#toggleLimit" + id + " .accordion-toggle" ).removeClass( "collapsed" );
+            	$( "#limit" + id ).addClass( "in" );
+        	}
+        	
             $( document ).ready( function() {
                 $( "#addLimit" ).click( function(e) {
                     e.preventDefault();
