@@ -187,6 +187,9 @@
                     newLimit += "                    <\/div>";
 
                     $( "#limitGroup" ).append(newLimit);
+                    
+                    $( "#toggleLimit" + nextId + " .accordion-toggle" ).removeClass( "collapsed" );
+                    $( "#limit" + nextId ).addClass( "in" );
                 })
         		
         		
